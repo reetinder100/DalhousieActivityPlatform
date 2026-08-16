@@ -8,6 +8,8 @@ import { useClickOutside } from "../Hooks/Clickoutside";
 
 import { useState, useEffect, useRef } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import {
   outdoorActivities,
   culturalExperiences,
@@ -33,6 +35,7 @@ import {
 } from "../styling/Card";
 
 export const ThingsToDo = () => {
+  const navigate = useNavigate();
   const [CardStyle5Layout, setCardStyle5Layout] = useState("default");
   const [ButtonText, setButtonText] = useState("Explore History and Arts");
 
@@ -114,10 +117,64 @@ export const ThingsToDo = () => {
   };
 
   const handleInnerButtonClick = (buttonText) => {
-    console.log(`Clicked: ${buttonText}`);
-    // Add your logic here for each button click
-    // For example, you could navigate to a different page or show more details
+    const buttonToSlug = {
+      "Explore about Churches": "Churches",
+      "Explore about Temples": "Temples",
+      "History of Dalhousie": "History",
+      "Gadi Culture": "Gadi-Culture",
+      "Chambyali culture": "Chambyali-Culture",
+      "Famous Local Food items": "Local-Food",
+      Waterfalls: "Waterfalls",
+      "Flora and Fauna": "Flora-Fauna",
+      "Sanctuary areas": "Sanctuary-Areas",
+    };
+
+    const slug = buttonToSlug[buttonText];
+
+    if (slug) {
+      navigate(`/things-to-do/${slug}`);
+    } else {
+      console.warn(`No slug found for button text: "${buttonText}"`);
+    }
   };
+
+  const handleCategoryClick = (title, id) => {
+    const titleToSlug = {
+      "Outdoor Adventures": "Outdoor-Adventure",
+      "Cultural Experiences": "Cultural-Experiences",
+      "Food & Dining": "Food-Dining",
+      "Nature and Wildlife": "Nature-Wildlife",
+      Shopping: "Shopping",
+      "Sports and Recreation": "Sports-Recreation",
+    };
+
+    const slug = titleToSlug[title];
+
+    if (slug) {
+      navigate(`/activities/${slug}`);
+    }
+  };
+
+  const handleInspireExplore = (title) => {
+    const titletoSlug = {
+      "Hiking trails": "Hiking-trails",
+      "Picnic Spots": "Picnic-Spots", // Fixed typo
+      "Mountain Biking": "Mountain-Biking",
+      "Offbeat places near Dalhousie": "Offbeat-places",
+    };
+    const slug = titletoSlug[title];
+    if (slug) {
+      navigate(`/things-to-do/${slug}`);
+    }
+  };
+
+  const handleFamilyexplore = () => {
+    navigate("/things-to-do/Family-FriendlyPlaces-Explore");
+  };
+
+  /*const handleBackToCategories = () => {
+    setSelectedCategory(null);
+  };*/
 
   const renderCards = (items) => (
     <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
@@ -141,7 +198,14 @@ export const ThingsToDo = () => {
         <Cardstyle2>
           {allActivities.map((item) => (
             <div key={item.id}>
-              <img src={item.image} alt={item.alt} />
+              <img
+                src={item.image}
+                alt={item.alt}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCategoryClick(item.title, item.id);
+                }}
+              />
               <h3>{item.title}</h3>
             </div>
           ))}
@@ -156,7 +220,7 @@ export const ThingsToDo = () => {
             Don't think twice about it. Dalhousie is the ultimate place to be
             for families.
           </p>
-          <button>Explore</button>
+          <button onClick={handleFamilyexplore}>Explore</button>
         </div>
         <div className="image-wrapper">
           <img src="/images/Dal-proj-img11.jpg" alt="Family in Dalhousie" />
@@ -235,7 +299,11 @@ export const ThingsToDo = () => {
         <CardStyle3>
           {exploreItems.map((item, index) => (
             <div key={item.id} className={index === 0 ? "left-item" : ""}>
-              <img src={item.image} alt={item.alt || item.title} />
+              <img
+                src={item.image}
+                alt={item.alt || item.title}
+                onClick={() => handleInspireExplore(item.title)}
+              />
               <h3>{item.title}</h3>
             </div>
           ))}

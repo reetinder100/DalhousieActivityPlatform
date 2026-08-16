@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const CarouselWrapper = styled.div`
   display: flex;
@@ -152,6 +153,8 @@ export const CardStyle6 = ({ cards = [] }) => {
     setTranslateX(containerCenter - cardCenter);
   };
 
+  const navigate = useNavigate();
+
   const handlePrev = () => {
     setOffsetIndex((prev) => {
       const newIndex = prev - 1;
@@ -168,7 +171,30 @@ export const CardStyle6 = ({ cards = [] }) => {
     });
   };
 
-  const handleCardClick = (index) => {};
+  const handleCardClick = (index) => {
+    // Get the actual card from the infinite array
+    const card = infiniteCards[index];
+    if (!card) return;
+
+    const title = card.title;
+
+    // Direct mapping
+    const titleToSlug = {
+      Hiking: "Hiking-Trails",
+      Camping: "Camping-Sites",
+      Paragliding: "Paragliding",
+      "River Rafting": "River-Rafting",
+      "Mountain Biking": "Mountain-Biking",
+      "Rope adventure activity": "Rope-Activity",
+    };
+
+    const slug = titleToSlug[title];
+
+    // Navigate to the activity page if slug exists
+    if (slug) {
+      navigate(`/activities/${slug}`);
+    }
+  };
 
   useEffect(() => {
     updateCarousel(offsetIndex);

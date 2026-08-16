@@ -270,7 +270,7 @@ export const HeroSection = styled.div`
 export const HeroSection2 = styled.div`
   width: 100%;
   height: 400px;
-  background-image: url("/images/Dal-proj-img1.jpg");
+  background-image: url("/images/Dal-proj-img28.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

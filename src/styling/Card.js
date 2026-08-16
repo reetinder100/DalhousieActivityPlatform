@@ -326,7 +326,45 @@ export const CardStyle4 = styled.div`
   min-height: 400px;
   box-sizing: border-box;
 
-  .content-wrapper {
+  .image-wrapper {
+    flex: 0 0 60%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    order: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // Image wrapper 2 - With clip-path (cone/triangle shape) - Image on LEFT
+  .image-wrapper2 {
+    flex: 0 0 60%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    order: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+      // Cone/Triangle shape
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+  }
+
+  // Combined content wrapper styles for both classes
+  .content-wrapper,
+  .content-wrapper2 {
     flex: 0 0 40%;
     padding: 40px 50px;
     background: #ffffff;
@@ -334,6 +372,8 @@ export const CardStyle4 = styled.div`
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    min-height: 400px;
+    order: 2;
 
     h2 {
       font-size: 32px;
@@ -341,6 +381,7 @@ export const CardStyle4 = styled.div`
       color: #1a1a1a;
       margin: 0 0 15px 0;
       text-transform: capitalize;
+      line-height: 1.2;
     }
 
     p {
@@ -371,57 +412,89 @@ export const CardStyle4 = styled.div`
     }
   }
 
-  .image-wrapper {
-    flex: 0 0 60%;
-    height: 100%;
-    min-height: 400px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+  // If you need specific styles for .content-wrapper2 only
+  .content-wrapper2 {
+    // Add any unique styles here
+    // For example, different background color:
+    // background: #f8f9fa;
   }
 
   @media (max-width: 1024px) {
     flex-direction: column;
     margin: 20px 15px;
 
-    .content-wrapper {
-      flex: 0 0 100%;
-      padding: 30px;
-      order: 2;
-    }
-
     .image-wrapper {
       flex: 0 0 100%;
-      min-height: 250px;
-      order: 1;
+      min-height: 300px;
+      order: 1 !important;
     }
-  }
 
-  @media (max-width: 640px) {
-    .content-wrapper {
-      padding: 20px;
+    .image-wrapper2 {
+      flex: 0 0 100%;
+      min-height: 300px;
+      order: 1 !important;
+
+      img {
+        -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+    }
+
+    .content-wrapper,
+    .content-wrapper2 {
+      flex: 0 0 100%;
+      padding: 30px;
+      order: 2 !important;
+      min-height: auto;
 
       h2 {
-        font-size: 24px;
+        font-size: 28px;
       }
 
       p {
         font-size: 16px;
       }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .content-wrapper,
+    .content-wrapper2 {
+      padding: 20px;
+
+      h2 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-size: 15px;
+        margin: 0 0 20px 0;
+      }
 
       button {
         padding: 10px 24px;
         font-size: 14px;
+        width: 100%;
+        text-align: center;
+        align-self: stretch;
+      }
+    }
+
+    .image-wrapper {
+      min-height: 200px;
+    }
+
+    .image-wrapper2 {
+      min-height: 200px;
+
+      img {
+        -webkit-clip-path: none;
+        clip-path: none;
       }
     }
   }
 `;
-
 // ============ CARD STYLE 5 ============
 
 export const CardStyle5 = styled.div`

@@ -61,7 +61,7 @@ const adventureActivities = [
   },
   {
     id: 7,
-    title: "Off road driving",
+    title: "Camping",
     image: "/images/Dal-proj-img23.jpg",
     alt: "Mountain biking",
   },
