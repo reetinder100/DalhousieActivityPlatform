@@ -12,6 +12,7 @@ export const FooterContainer = styled.footer`
   margin-top: auto;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden; /* Prevent overflow */
 
   /* Glowing effect */
   &::before {
@@ -60,12 +61,15 @@ export const FooterContainer = styled.footer`
     gap: 40px;
     position: relative;
     z-index: 1;
+    overflow: hidden; /* Prevent overflow */
   }
 
   .footer-section {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    min-width: 0; /* Prevent overflow */
+    overflow: hidden; /* Prevent overflow */
   }
 
   .footer-title {
@@ -75,6 +79,8 @@ export const FooterContainer = styled.footer`
     margin: 0 0 8px 0;
     color: #ffffff;
     position: relative;
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word;
 
     &::after {
       content: "";
@@ -93,6 +99,9 @@ export const FooterContainer = styled.footer`
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
     margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%; /* Prevent overflow */
   }
 
   .footer-link {
@@ -102,6 +111,9 @@ export const FooterContainer = styled.footer`
     transition: all 0.3s ease;
     display: inline-block;
     position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 
     &:hover {
       color: #667eea;
@@ -113,6 +125,7 @@ export const FooterContainer = styled.footer`
     display: flex;
     gap: 15px;
     margin-top: 8px;
+    flex-wrap: wrap; /* Allow wrapping on mobile */
   }
 
   .social-link {
@@ -127,6 +140,7 @@ export const FooterContainer = styled.footer`
     transition: all 0.3s ease;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.03);
+    flex-shrink: 0; /* Prevent shrinking */
 
     &:hover {
       background: linear-gradient(135deg, #667eea, #764ba2);
@@ -149,17 +163,21 @@ export const FooterContainer = styled.footer`
     gap: 10px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
 
   .footer-bottom-text {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .footer-bottom-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
   }
 
   .footer-bottom-link {
@@ -167,12 +185,15 @@ export const FooterContainer = styled.footer`
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.85rem;
     transition: color 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     &:hover {
       color: #667eea;
     }
   }
 
+  /* Tablet */
   @media (max-width: 992px) {
     .footer-content {
       grid-template-columns: repeat(2, 1fr);
@@ -180,26 +201,110 @@ export const FooterContainer = styled.footer`
     }
   }
 
+  /* Mobile */
+  @media (max-width: 768px) {
+    padding: 25px 15px 15px;
+
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .footer-title {
+      font-size: 1rem;
+    }
+
+    .footer-text,
+    .footer-link {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* Small Mobile */
   @media (max-width: 576px) {
-    padding: 30px 15px 15px;
+    padding: 20px 10px 12px;
 
     .footer-content {
       grid-template-columns: 1fr;
-      gap: 25px;
+      gap: 20px;
+    }
+
+    .footer-section {
+      gap: 8px;
+      padding: 0 5px;
+    }
+
+    .footer-title {
+      font-size: 0.95rem;
+      margin: 0 0 6px 0;
+
+      &::after {
+        width: 25px;
+      }
+    }
+
+    .footer-text,
+    .footer-link {
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .social-links {
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      font-size: 0.8rem;
     }
 
     .footer-bottom {
       flex-direction: column;
       text-align: center;
+      gap: 8px;
+      padding-top: 15px;
+      margin-top: 20px;
+    }
+
+    .footer-bottom-text {
+      font-size: 0.75rem;
     }
 
     .footer-bottom-links {
       flex-wrap: wrap;
       justify-content: center;
+      gap: 12px;
     }
 
-    .social-links {
-      justify-content: center;
+    .footer-bottom-link {
+      font-size: 0.75rem;
+    }
+  }
+
+  /* Extra Small Mobile */
+  @media (max-width: 380px) {
+    padding: 15px 6px 10px;
+
+    .footer-title {
+      font-size: 0.85rem;
+    }
+
+    .footer-text,
+    .footer-link {
+      font-size: 0.7rem;
+    }
+
+    .social-link {
+      width: 32px;
+      height: 32px;
+      font-size: 0.7rem;
+    }
+
+    .footer-bottom-text,
+    .footer-bottom-link {
+      font-size: 0.65rem;
     }
   }
 `;

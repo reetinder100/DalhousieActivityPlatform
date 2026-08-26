@@ -185,15 +185,11 @@ export const ThingsToDo = () => {
         <SectionTitle2>Choose Your Activity</SectionTitle2>
         <Cardstyle2>
           {allActivities.map((item) => (
-            <div key={item.id}>
-              <img
-                src={item.image}
-                alt={item.alt}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCategoryClick(item.title, item.id);
-                }}
-              />
+            <div
+              key={item.id}
+              onClick={() => handleCategoryClick(item.title, item.id)}
+            >
+              <img src={item.image} alt={item.alt} />
               <h3>{item.title}</h3>
             </div>
           ))}
@@ -286,12 +282,12 @@ export const ThingsToDo = () => {
         <SectionTitle2>Get Inspired to Explore</SectionTitle2>
         <CardStyle3>
           {exploreItems.map((item, index) => (
-            <div key={item.id} className={index === 0 ? "left-item" : ""}>
-              <img
-                src={item.image}
-                alt={item.alt || item.title}
-                onClick={() => handleInspireExplore(item.title)}
-              />
+            <div
+              key={item.id}
+              className={index === 0 ? "left-item" : ""}
+              onClick={() => handleInspireExplore(item.title)}
+            >
+              <img src={item.image} alt={item.alt || item.title} />
               <h3>{item.title}</h3>
             </div>
           ))}

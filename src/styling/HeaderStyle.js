@@ -34,6 +34,7 @@ export const HeaderContainer = styled.div`
     background-clip: text;
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: center;
 
     &:hover {
       transform: scale(1.05);
@@ -67,11 +68,13 @@ export const HeaderContainer = styled.div`
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin: 0;
+    text-align: center;
   }
 
   /* Contact */
   .contact-btn {
     text-decoration: none;
+    text-align: center;
     padding: 8px 24px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;

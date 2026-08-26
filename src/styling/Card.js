@@ -140,7 +140,7 @@ export const DashboardCard = styled.div`
   }
 
   @media (max-width: 480px) {
-    flex: 0 0 calc(50% - 8px);
+    flex: 0 0 calc(50% - 4px);
     min-width: 0;
     width: auto;
     border-radius: 8px;
@@ -622,7 +622,7 @@ export const CardStyle4 = styled.div`
 
   // ===== RESPONSIVE: 420px =====
   @media (max-width: 420px) {
-    margin: 10px 5px;
+    margin: 10px 0px;
     border-radius: 10px;
     min-height: 300px;
 
