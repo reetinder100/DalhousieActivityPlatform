@@ -8,7 +8,6 @@ export const DashboardStyle1 = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-
   margin: 0 auto;
   padding: 20px;
   background: transparent;
@@ -30,29 +29,44 @@ export const DashboardStyle1 = styled.div`
     gap: 15px;
     border-radius: 12px;
     justify-content: center;
+    align-items: center;
   }
 
   @media (max-width: 480px) {
-    padding: 15px 10px;
-    gap: 12px;
-    border-radius: 10px;
+    flex-direction: row;
+    gap: 10px;
+    padding: 8px 12px 15px 12px; /* Reduced top padding from 15px to 8px */
+    border-radius: 8px;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-height: none;
+    row-gap: 12px; /* Reduced from 15px to 12px */
+    margin-top: 0; /* Ensure no extra top margin */
+  }
+
+  @media (max-width: 420px) {
+    padding: 5px 10px 12px 10px; /* Even less top padding for very small screens */
+    gap: 8px;
+    row-gap: 10px;
+    border-radius: 8px;
+    max-height: none;
   }
 `;
 
 export const DescriptionText = styled.p`
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   line-height: 1.8;
   color: #000000;
-  padding: 60px 40px;
+  padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 40px);
   box-sizing: border-box;
   text-align: center;
   font-weight: 500;
   width: 100%;
-  height: 500px;
+  height: clamp(300px, 45vw, 500px);
   margin: 0 auto;
-  padding-top: 100px;
-  margin-top: -150px;
-  margin-bottom: -240px;
+  padding-top: clamp(50px, 8vw, 100px);
+  margin-top: clamp(-80px, -12vw, -150px);
+  margin-bottom: clamp(-120px, -18vw, -240px);
   position: relative;
   z-index: 1;
 
@@ -79,15 +93,51 @@ export const DescriptionText = styled.p`
     z-index: 1;
   }
 
+  /* Medium screens - increase height */
+  @media (max-width: 1024px) {
+    height: clamp(380px, 50vw, 550px);
+    padding-top: clamp(60px, 10vw, 120px);
+    margin-top: clamp(-100px, -15vw, -180px);
+    margin-bottom: clamp(-140px, -20vw, -260px);
+  }
+
+  /* Tablet screens - increase height more */
   @media (max-width: 768px) {
-    padding: 40px 20px;
-    font-size: 1.2rem;
-    background-attachment: scroll; // Better for mobile
+    height: clamp(450px, 65vw, 600px);
+    padding-top: clamp(70px, 12vw, 140px);
+    margin-top: clamp(-120px, -18vw, -200px);
+    margin-bottom: clamp(-160px, -22vw, -280px);
+    background-attachment: scroll; /* Change to scroll for better mobile performance */
   }
 
   @media (max-width: 480px) {
-    padding: 30px 15px;
-    font-size: 1rem;
+    height: clamp(350px, 60vw, 450px); /* Reduced from 500px-700px */
+    padding-top: clamp(60px, 10vw, 100px); /* Reduced from 80px-160px */
+    margin-top: clamp(
+      -100px,
+      -15vw,
+      -160px
+    ); /* Reduced from -140px to -220px */
+    margin-bottom: clamp(
+      -130px,
+      -18vw,
+      -200px
+    ); /* Reduced from -180px to -300px */
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+      background: rgb(255, 255, 255, 0.35);
+    }
+  }
+
+  /* Very small screens - maximum height */
+  @media (max-width: 360px) {
+    height: clamp(550px, 90vw, 750px);
+    padding-top: clamp(90px, 18vw, 180px);
+    margin-top: clamp(-160px, -22vw, -240px);
+    margin-bottom: clamp(-200px, -28vw, -320px);
   }
 `;
 
@@ -190,12 +240,15 @@ export const Title2 = styled.h2`
 export const CardContainer = styled.div`
   width: 100%;
   display: flex;
-  height: 550px;
+  max-height: 400px;
+  margin-bottom: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
   position: relative;
+  box-sizing: border-box; /* Add this */
+  overflow: hidden; /* Optional: prevents content from spilling out */
 
   @media (max-width: 1440px) {
     padding: 20px 40px;
@@ -203,6 +256,47 @@ export const CardContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 10px; /* Add smaller padding for mobile */
+    max-height: none; /* Remove max-height constraint on mobile */
+  }
+`;
+
+export const CardContainer2 = styled.div`
+  width: 100%;
+  display: flex;
+  max-height: 400px;
+  margin-bottom: 120px;
+  transform: translateY(-30px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+  box-sizing: border-box; /* Add this */
+  overflow: hidden; /* Optional: prevents content from spilling out */
+
+  @media (max-width: 1440px) {
+    padding: 20px 40px;
+  }
+
+  @media (max-width: 768px) {
+    transform: translateY(0px);
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 10px; /* Add smaller padding for mobile */
+    max-height: none; /* Remove max-height constraint on mobile */
+    transform: translateY(0px); /* Ensure no transform on mobile */
+    width: 100%; /* Ensure full width */
+    margin-left: 0; /* Reset any margins */
+    margin-right: 0; /* Reset any margins */
   }
 `;
 
@@ -226,7 +320,9 @@ export const SectionTitle = styled.h3`
   @media (max-width: 480px) {
     font-size: 1.6rem;
     margin-left: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 4px; /* Added small bottom margin */
+    margin-top: 0px;
+    padding: 0px;
   }
 `;
 

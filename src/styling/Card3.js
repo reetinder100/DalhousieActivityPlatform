@@ -14,6 +14,8 @@ export const Card3Container = styled.div`
   align-items: center;
   position: relative;
   padding: 2rem 1rem;
+  box-sizing: border-box; /* Add this */
+  overflow: hidden; /* Prevent content from spilling out */
 
   &::before {
     content: "";
@@ -29,6 +31,16 @@ export const Card3Container = styled.div`
   & > div {
     position: relative;
     z-index: 2;
+    max-width: 100%; /* Ensure children don't overflow */
+    box-sizing: border-box;
+    padding: 0 10px; /* Add some padding */
+  }
+
+  /* Tablet responsiveness */
+  @media (max-width: 1024px) {
+    height: 600px;
+    background-position: center -800px;
+    padding: 2rem 1.5rem;
   }
 
   /* Mobile responsiveness */
@@ -37,15 +49,35 @@ export const Card3Container = styled.div`
     min-height: 100vh;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 1rem;
-    background-position: center center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    background-position: center center; /* Reset background position */
     gap: 2rem;
+
+    & > div {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 0 5px;
+    }
   }
 
   @media (max-width: 480px) {
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
     min-height: 90vh;
     gap: 1.5rem;
+
+    & > div {
+      padding: 0 5px;
+      width: 100%;
+    }
+  }
+
+  /* Very small screens */
+  @media (max-width: 360px) {
+    padding: 1.5rem 0.75rem;
+    min-height: 80vh;
+    gap: 1rem;
   }
 `;
 

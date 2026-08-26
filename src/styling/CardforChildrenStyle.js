@@ -5,8 +5,16 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
   padding: 40px 20px;
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 10px;
+  }
 `;
 
 export const Container = styled.div`
@@ -14,6 +22,22 @@ export const Container = styled.div`
   border-radius: 20px;
   padding: 60px 40px;
   width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    padding: 50px 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 35px 20px;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 25px 15px;
+    border-radius: 12px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -23,12 +47,18 @@ export const Title = styled.h1`
   margin-bottom: 8px;
   text-align: center;
 
+  @media (max-width: 1024px) {
+    font-size: 2.2rem;
+  }
+
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 6px;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
   }
 `;
 
@@ -39,14 +69,22 @@ export const MainSubtitle = styled.p`
   margin-bottom: 50px;
   line-height: 1.6;
 
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+    padding: 0 10px;
   }
 
   @media (max-width: 480px) {
-    font-size: 0.95rem;
-    margin-bottom: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    line-height: 1.5;
   }
 `;
 
@@ -61,16 +99,46 @@ export const Card = styled.div`
     border-bottom: none;
   }
 
+  /* Alternate layout - image on right for even cards */
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column !important; /* Override the even card rule */
     text-align: center;
-    gap: 25px;
+    gap: 20px;
+    padding: 25px 0;
+  }
+
+  @media (max-width: 480px) {
+    gap: 15px;
+    padding: 20px 0;
   }
 `;
 
 export const CardContent = styled.div`
   flex: 1;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    padding: 5px 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+    gap: 8px;
+  }
 `;
 
 export const CardTitle = styled.h2`
@@ -79,12 +147,18 @@ export const CardTitle = styled.h2`
   color: #1a1a2e;
   margin: 0;
 
+  @media (max-width: 1024px) {
+    font-size: 2rem;
+  }
+
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    text-align: center;
   }
 `;
 
@@ -94,12 +168,21 @@ export const CardDescription = styled.p`
   line-height: 1.7;
   margin: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     font-size: 1rem;
   }
 
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 5px;
+  }
+
   @media (max-width: 480px) {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 0;
   }
 `;
 
@@ -128,38 +211,91 @@ export const ExploreButton = styled.button`
     transform: translateY(0);
   }
 
+  @media (max-width: 1024px) {
+    padding: 13px 40px;
+    font-size: 1rem;
+  }
+
   @media (max-width: 768px) {
     padding: 12px 35px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     align-self: center;
     min-width: 200px;
+    margin-top: 10px;
   }
 
   @media (max-width: 480px) {
     padding: 10px 25px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     min-width: 100%;
     width: 100%;
+    margin-top: 8px;
+    border-radius: 30px;
   }
 `;
 
 export const CardImage = styled.div`
   flex: 1;
   height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
   background: #f0f0f0;
+  flex-shrink: 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    border-radius: 14px;
+  }
+
+  /* Mobile Large */
   @media (max-width: 768px) {
     width: 100%;
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+    border-radius: 12px;
+    order: -1; /* Image appears above content on mobile */
+  }
+
+  /* Mobile Medium */
+  @media (max-width: 640px) {
     height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+  }
+
+  /* Mobile Small */
+  @media (max-width: 480px) {
+    height: 180px;
+    min-height: 180px;
+    max-height: 180px;
+    border-radius: 10px;
+  }
+
+  /* Mobile Extra Small */
+  @media (max-width: 380px) {
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    border-radius: 8px;
   }
 `;

@@ -47,10 +47,12 @@ export const DashboardCard = styled.div`
   position: relative;
   background: transparent;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -58,6 +60,7 @@ export const DashboardCard = styled.div`
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
+    flex-shrink: 0;
   }
 
   &:hover img {
@@ -70,16 +73,17 @@ export const DashboardCard = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-    font-size: 1.4rem;
+    font-size: clamp(0.95rem, 3vw, 1.4rem);
     font-weight: 700;
     color: white;
     text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
     text-align: center;
     z-index: 2;
-    width: 90%;
-    padding: 0 20px;
+    width: clamp(80%, 90%, 95%);
+    padding: 0 clamp(10px, 2vw, 20px);
     letter-spacing: 0.5px;
     line-height: 1.3;
+    pointer-events: none;
   }
 
   &::after {
@@ -104,53 +108,66 @@ export const DashboardCard = styled.div`
     opacity: 0.8;
   }
 
+  /* Responsive with proportional scaling */
   @media (max-width: 1440px) {
     flex: 1 1 260px;
     min-width: 230px;
+    border-radius: clamp(8px, 1vw, 12px);
 
     img {
-      height: 240px;
-    }
-
-    h3 {
-      font-size: 1.2rem;
+      height: clamp(180px, 18vw, 240px);
     }
   }
 
   @media (max-width: 1024px) {
     flex: 1 1 240px;
     min-width: 200px;
+    border-radius: clamp(6px, 0.8vw, 10px);
 
     img {
-      height: 220px;
-    }
-
-    h3 {
-      font-size: 1.1rem;
+      height: clamp(160px, 16vw, 220px);
     }
   }
 
   @media (max-width: 768px) {
     flex: 1 1 100%;
     min-width: 100%;
+    border-radius: clamp(6px, 0.8vw, 10px);
 
     img {
-      height: 200px;
-    }
-
-    h3 {
-      font-size: 1rem;
+      height: clamp(150px, 25vw, 200px);
     }
   }
 
   @media (max-width: 480px) {
+    flex: 0 0 calc(50% - 8px);
+    min-width: 0;
+    width: auto;
+    border-radius: 8px;
+
     img {
-      height: 180px;
+      height: clamp(140px, 35vw, 180px);
     }
 
-    h3 {
-      font-size: 0.95rem;
-      padding: 0 15px;
+    &::after {
+      height: 100%;
+    }
+
+    /* First child spans full width when there are odd number of items (3, 5, 7, etc.) */
+    &:first-child:nth-last-child(odd) {
+      flex: 0 0 100%;
+      min-width: 100%;
+      width: 100%;
+    }
+
+    /* Fallback for browsers that don't support nth-last-child(odd) */
+    &:nth-child(1):nth-last-child(3),
+    &:nth-child(1):nth-last-child(5),
+    &:nth-child(1):nth-last-child(7),
+    &:nth-child(1):nth-last-child(9) {
+      flex: 0 0 100%;
+      min-width: 100%;
+      width: 100%;
     }
   }
 `;
@@ -212,14 +229,43 @@ export const Cardstyle2 = styled.div`
     z-index: 1;
   }
 
+  /* Tablet: 2 columns */
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
+  /* Mobile: 3 columns, 2 rows */
   @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    & img {
+      height: 150px; /* Smaller images for mobile */
+    }
+
+    & h3 {
+      font-size: 14px; /* Smaller text for mobile */
+      bottom: 12px;
+    }
+
+    & > div {
+      border-radius: 8px;
+    }
+  }
+
+  /* Very small screens: adjust further */
+  @media (max-width: 420px) {
+    gap: 8px;
+
+    & img {
+      height: 120px;
+    }
+
+    & h3 {
+      font-size: 12px;
+      bottom: 8px;
+    }
   }
 `;
 
@@ -293,20 +339,88 @@ export const CardStyle3 = styled.div`
     z-index: 1;
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: auto;
+  /* Tablet */
+  @media (max-width: 1024px) {
     gap: 20px;
+    height: 450px;
+  }
 
+  /* Mobile - 3 columns, 2 rows */
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 12px;
+    height: auto;
+    padding: 0 10px;
+
+    /* First child spans all 3 columns in first row */
+    & > div:first-child {
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    /* Other items (2nd, 3rd, 4th, etc.) go to second row */
+    & > div:not(:first-child) {
+      grid-row: 2 / 3;
+      height: 150px;
+      border-radius: 8px;
+    }
+
+    /* If there are more than 4 items, they will wrap to next rows */
+    & > div:nth-child(n + 5) {
+      grid-row: 3 / 4;
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    & h3 {
+      font-size: 14px;
+      bottom: 12px;
+      width: 95%;
+    }
+
+    & > div::after {
+      height: 50%;
+    }
+
+    /* Override .left-item for mobile */
     .left-item {
       grid-row: auto;
       grid-column: auto;
-      height: 300px;
+      height: auto;
     }
 
-    & > div {
-      height: 250px;
+    .left-item img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  /* Very small screens */
+  @media (max-width: 480px) {
+    gap: 8px;
+    padding: 0 5px;
+
+    & > div:first-child {
+      height: 160px;
+      border-radius: 8px;
+    }
+
+    & > div:not(:first-child) {
+      height: 120px;
+      border-radius: 6px;
+    }
+
+    & h3 {
+      font-size: 12px;
+      bottom: 8px;
     }
   }
 `;
@@ -419,6 +533,7 @@ export const CardStyle4 = styled.div`
     // background: #f8f9fa;
   }
 
+  // ===== RESPONSIVE: 1024px =====
   @media (max-width: 1024px) {
     flex-direction: column;
     margin: 20px 15px;
@@ -457,29 +572,59 @@ export const CardStyle4 = styled.div`
     }
   }
 
-  @media (max-width: 640px) {
+  // ===== RESPONSIVE: 760px =====
+  @media (max-width: 760px) {
+    margin: 15px 10px;
+    border-radius: 12px;
+    min-height: 350px;
+
+    .image-wrapper {
+      min-height: 250px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .image-wrapper2 {
+      min-height: 250px;
+
+      img {
+        -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        object-fit: cover;
+      }
+    }
+
     .content-wrapper,
     .content-wrapper2 {
-      padding: 20px;
+      padding: 25px 30px;
+      min-height: auto;
 
       h2 {
         font-size: 24px;
-        margin: 0 0 10px 0;
+        margin: 0 0 12px 0;
       }
 
       p {
         font-size: 15px;
         margin: 0 0 20px 0;
+        line-height: 1.5;
       }
 
       button {
-        padding: 10px 24px;
+        padding: 10px 25px;
         font-size: 14px;
-        width: 100%;
-        text-align: center;
-        align-self: stretch;
+        align-self: flex-start;
       }
     }
+  }
+
+  // ===== RESPONSIVE: 420px =====
+  @media (max-width: 420px) {
+    margin: 10px 5px;
+    border-radius: 10px;
+    min-height: 300px;
 
     .image-wrapper {
       min-height: 200px;
@@ -489,8 +634,75 @@ export const CardStyle4 = styled.div`
       min-height: 200px;
 
       img {
-        -webkit-clip-path: none;
-        clip-path: none;
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+      }
+    }
+
+    .content-wrapper,
+    .content-wrapper2 {
+      padding: 20px;
+      min-height: auto;
+
+      h2 {
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0 0 16px 0;
+        line-height: 1.5;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        align-self: stretch;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  // ===== RESPONSIVE: 360px (extra small) =====
+  @media (max-width: 360px) {
+    margin: 8px 4px;
+    border-radius: 8px;
+    min-height: 250px;
+
+    .image-wrapper {
+      min-height: 150px;
+    }
+
+    .image-wrapper2 {
+      min-height: 150px;
+
+      img {
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+      }
+    }
+
+    .content-wrapper,
+    .content-wrapper2 {
+      padding: 15px;
+
+      h2 {
+        font-size: 18px;
+        margin: 0 0 8px 0;
+      }
+
+      p {
+        font-size: 13px;
+        margin: 0 0 14px 0;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 12px;
       }
     }
   }
@@ -512,16 +724,17 @@ export const CardStyle5 = styled.div`
 
     @media (max-width: 768px) {
       padding: 15px;
+      min-height: auto;
     }
   }
 
-  .container h3, /* Target h3 directly */
+  .container h3,
   .container .section-title {
     font-size: 2.5rem !important;
     font-weight: 800 !important;
     margin-bottom: 30px !important;
     padding: 10px 0 !important;
-    padding-left: 40px !important; /* Force padding */
+    padding-left: 40px !important;
     position: relative !important;
     align-self: flex-start !important;
     width: 100% !important;
@@ -637,6 +850,119 @@ export const CardStyle5 = styled.div`
       grid-area: position11;
       position: relative;
     }
+
+    @media (max-width: 1440px) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      height: 600px;
+      gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+      height: auto;
+      min-height: 500px;
+      gap: 12px;
+      padding: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        "position1 position1"
+        "position2 position3"
+        "position4 position5"
+        "position6 position7"
+        "position8 position9"
+        "position10 position11";
+      border-radius: 12px;
+      overflow: visible;
+
+      &::before {
+        border-radius: 12px;
+      }
+
+      .position1,
+      .position2,
+      .position3,
+      .position4,
+      .position5,
+      .position6,
+      .position7,
+      .position8,
+      .position9,
+      .position10,
+      .position11 {
+        width: 100%;
+        height: auto;
+        min-height: 50px;
+        padding: 5px;
+      }
+
+      .position1 {
+        grid-area: position1;
+        width: 100%;
+      }
+
+      .position11 {
+        position: relative;
+        z-index: 5;
+      }
+
+      .inner-button {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        padding: 10px 15px;
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      .button1 {
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-menu {
+        min-width: 100%;
+        left: 0;
+        right: 0;
+        transform: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        z-index: 1000;
+        border-radius: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      gap: 8px;
+      padding: 12px;
+      min-height: 400px;
+
+      .inner-button {
+        font-size: 10px;
+        padding: 8px 10px;
+      }
+
+      .button1 {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      .dropdown-menu {
+        top: calc(100% + 4px);
+        border-radius: 8px;
+      }
+
+      .dropdown-item {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-height: 44px;
+      }
+    }
   }
 
   /* Inner button styles */
@@ -676,8 +1002,19 @@ export const CardStyle5 = styled.div`
     transition: all 0.3s ease;
     white-space: nowrap;
     border: none;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
+  /* Dropdown menu */
   .dropdown-menu {
     position: absolute;
     left: 50%;
@@ -685,11 +1022,12 @@ export const CardStyle5 = styled.div`
     min-width: 220px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     padding: 8px 0;
     animation: dropdownFadeIn 0.2s ease;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 100;
 
     @keyframes dropdownFadeIn {
       from {
@@ -703,6 +1041,7 @@ export const CardStyle5 = styled.div`
     }
   }
 
+  /* Dropdown items */
   .dropdown-item {
     background: white;
     color: #333;
@@ -724,92 +1063,17 @@ export const CardStyle5 = styled.div`
 
     &:active {
       color: #eb3030;
+      background: #f0f0f0;
     }
 
     &:not(:last-child) {
       border-bottom: 1px solid #f0f0f0;
     }
-  }
 
-  @media (max-width: 1440px) {
-    .content-wrapper {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .content-wrapper {
-      height: 600px;
-      gap: 15px;
-    }
-
-    .inner-button {
-      font-size: 11px;
-      padding: 10px 20px;
-    }
-
-    .button1 {
-      font-size: 24px;
-      padding: 10px 20px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 15px 10px;
-    }
-
-    .content-wrapper {
-      height: auto;
-      min-height: 500px;
-      gap: 10px;
-      padding: 15px;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-    }
-
-    .inner-button {
-      font-size: 10px;
-      padding: 8px 12px;
-      white-space: normal;
-      word-break: break-word;
-    }
-
-    .button1 {
-      font-size: 18px;
-      padding: 8px 14px;
-    }
-
-    .dropdown-menu {
-      min-width: 180px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .content-wrapper {
-      min-height: 400px;
-      gap: 8px;
-      padding: 10px;
-    }
-
-    .inner-button {
-      font-size: 9px;
-      padding: 6px 10px;
-    }
-
-    .button1 {
-      font-size: 16px;
-      padding: 6px 12px;
-    }
-
-    .dropdown-menu {
-      min-width: 150px;
-    }
-
-    .dropdown-item {
-      padding: 10px 16px;
-      font-size: 12px;
+    @media (max-width: 768px) {
+      padding: 14px 18px;
+      font-size: 14px;
+      min-height: 48px;
     }
   }
 `;

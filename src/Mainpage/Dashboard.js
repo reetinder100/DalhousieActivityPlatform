@@ -7,6 +7,7 @@ import {
   CardContainer,
   Container2,
   Title2,
+  CardContainer2,
 } from "../styling/DashboardStyle";
 import { CardStyle6 } from "../styling/Card2";
 import { Card3 } from "../styling/Card3";
@@ -45,20 +46,17 @@ export const Dashboard = () => {
     navigate(`/dashboard/popular-spots`);
   };
 
-  const renderCards = (items) => (
-    <DashboardStyle1>
-      {items.map((item) => (
-        <DashboardCard key={item.id}>
-          <img
-            src={item.image}
-            alt={item.alt || item.title}
-            onClick={() => handleThingstoDo(item.title, item.id)}
-          />
-          <h3>{item.title}</h3>
-        </DashboardCard>
-      ))}
-    </DashboardStyle1>
-  );
+  const renderCards = (items) =>
+    items.map((item) => (
+      <DashboardCard key={item.id}>
+        <img
+          src={item.image}
+          alt={item.alt || item.title}
+          onClick={() => handleThingstoDo(item.title, item.id)}
+        />
+        <h3>{item.title}</h3>
+      </DashboardCard>
+    ));
 
   return (
     <div>
@@ -76,10 +74,10 @@ export const Dashboard = () => {
 
       <DescriptionText></DescriptionText>
 
-      <CardContainer>
+      <CardContainer2>
         <SectionTitle>Planning to travel in town</SectionTitle>
         <DashboardStyle1>{renderCards(TaxiBooking)}</DashboardStyle1>
-      </CardContainer>
+      </CardContainer2>
 
       <Card3 />
 

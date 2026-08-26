@@ -176,18 +176,6 @@ export const ThingsToDo = () => {
     setSelectedCategory(null);
   };*/
 
-  const renderCards = (items) => (
-    <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-      {items.map((item) => (
-        <DashboardCard key={item.id}>
-          <img src={item.image} alt={item.alt || item.title} />
-          <h3>{item.title}</h3>
-          <p>{item.description || "Explore this amazing activity"}</p>
-        </DashboardCard>
-      ))}
-    </div>
-  );
-
   return (
     <div>
       <HeroSection2>...</HeroSection2>
