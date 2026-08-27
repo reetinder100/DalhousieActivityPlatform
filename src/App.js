@@ -1,7 +1,7 @@
 import ContactUs from "./Webpages/ContactUs";
 import { Header } from "./Header&Footer/Header";
 import ScrollToTop from "./component/ScrolltoTop";
-import { Dashboard } from "./Mainpage/Dashboard";
+import { Dashboard } from "./Webpages/Dashboard";
 import ThingsToDo from "./Webpages/ThingstoDo";
 import { Routes, Route } from "react-router-dom";
 import { Footer } from "./Header&Footer/Footer";
