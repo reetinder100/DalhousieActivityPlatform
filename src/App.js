@@ -1,15 +1,14 @@
-import React from "react";
+import ContactUs from "./Webpages/ContactUs";
 import { Header } from "./Header&Footer/Header";
 import ScrollToTop from "./component/ScrolltoTop";
 import { Dashboard } from "./Mainpage/Dashboard";
-import { HeaderSpacer } from "./styling/HeaderStyle";
-import ThingsToDo from "./ThingsToDo/ThingstoDo";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ThingsToDo from "./Webpages/ThingstoDo";
+import { Routes, Route } from "react-router-dom";
 import { Footer } from "./Header&Footer/Footer";
 import ContentData from "./component/CardforChildren";
 import BikeRentalSection from "./component/Bikerental";
 import BeforeChildrenContentData from "./component/BeforeChildrenCard";
-import { culturalExperiences, outdoorActivities } from "./data/thingstoDoData";
+import { outdoorActivities } from "./data/thingstoDoData";
 import { CulturalExperiences } from "./data/CulturealExperiencesData";
 import { NatureWildlifeData } from "./data/NatureData";
 import { FoodDiningData } from "./data/FoodData";
@@ -34,7 +33,6 @@ import {
   waterfallsData,
 } from "./data/Sanctuary-FloraFauna-WaterfallData";
 import { popularSpotsData1, popularSpotsData } from "./data/PopularSpotData";
-import { bikeRentalData } from "./data/BikeRentalData";
 import GlobalStyles from "./styling/BorderBoxGlobal";
 import TrailsGuide from "./component/Adventuredisplay";
 
@@ -396,7 +394,7 @@ function App() {
           }
         />
 
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
 
       <Footer />

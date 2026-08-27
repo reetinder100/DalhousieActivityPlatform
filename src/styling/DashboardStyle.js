@@ -128,7 +128,7 @@ export const DescriptionText = styled.p`
     background-position: center;
 
     &::before {
-      background: rgb(255, 255, 255, 0.35);
+      background: rgb(255, 255, 255, 0.45);
     }
   }
 
@@ -365,8 +365,8 @@ export const HeroSection = styled.div`
 
 export const HeroSection2 = styled.div`
   width: 100%;
-  height: 400px;
-  background-image: url("/images/Dal-proj-img28.jpg");
+  height: 600px;
+  background-image: url("/images/Dal-proj-img-contactUs.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
