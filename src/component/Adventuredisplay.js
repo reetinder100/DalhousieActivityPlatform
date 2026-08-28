@@ -16,12 +16,10 @@ import {
   DetailsGrid,
   DetailItem,
   ButtonGroup,
-  BaseButton,
   CabButton,
   GuideButton,
   MoreInfoButton,
   ExpandedDetails,
-  getDifficultyColor,
 } from "../styling/AdventuredisplayStyle";
 import { useState } from "react";
 

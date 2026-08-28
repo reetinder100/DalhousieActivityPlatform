@@ -1,6 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-import { CulturalExperiences } from "../data/CulturealExperiencesData";
 import {
   Wrapper,
   Container,

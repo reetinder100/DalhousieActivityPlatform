@@ -11,12 +11,6 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
-  outdoorActivities,
-  culturalExperiences,
-  foodAndDining,
-  natureAndWildlife,
-  shopping,
-  sportsAndRecreation,
   allActivities,
   exploreItems,
   faqs,
@@ -24,7 +18,6 @@ import {
 } from "../data/thingstoDoData";
 
 import {
-  DashboardCard,
   Cardstyle2,
   CardStyle3,
   CardStyle4,

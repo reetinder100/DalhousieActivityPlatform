@@ -32,7 +32,6 @@ import {
 } from "../styling/DashboardStyle";
 
 export const ContactUs = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

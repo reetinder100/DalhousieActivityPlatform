@@ -293,18 +293,16 @@ export const CardContainer = styled.div`
 `;
 
 export const CardStyle6 = ({ cards = [] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const containerRef = useRef(null);
   const navigate = useNavigate();
 
-  // Calculate dynamic card width based on screen size
   const getCardWidth = () => {
     if (typeof window === "undefined") return 240;
     const width = window.innerWidth;
-    if (width <= 480) return 130; // Adjusted for flex: 0 0 100px + gap
-    if (width <= 768) return 170; // Adjusted for flex: 0 0 140px + gap
-    if (width <= 1024) return 200; // Adjusted for flex: 0 0 170px + gap
+    if (width <= 480) return 130;
+    if (width <= 768) return 170;
+    if (width <= 1024) return 200;
     return 240;
   };
 
@@ -317,31 +315,15 @@ export const CardStyle6 = ({ cards = [] }) => {
     return 20;
   };
 
-  const cardWidth = getCardWidth();
-  const gap = getGap();
-  const scrollAmount = cardWidth + gap;
   const totalCards = cards.length;
-
   const REPEAT_COUNT = 50;
   const infiniteCards = Array(REPEAT_COUNT).fill(cards).flat();
   const infiniteTotal = infiniteCards.length;
-
   const MIDDLE = Math.floor(infiniteTotal / 2);
   const startIndex = MIDDLE - (MIDDLE % totalCards);
   const [offsetIndex, setOffsetIndex] = useState(startIndex);
 
-  // Update card dimensions on resize
-  useEffect(() => {
-    const handleResize = () => {
-      // Force re-render to update card dimensions
-      updateCarousel(offsetIndex);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [offsetIndex]);
-
-  const updateCarousel = (index) => {
+  const updateCarousel = useCallback((index) => {
     if (!containerRef.current) return;
     const containerWidth = containerRef.current.clientWidth;
     const currentCardWidth = getCardWidth();
@@ -351,7 +333,7 @@ export const CardStyle6 = ({ cards = [] }) => {
     const containerCenter = containerWidth / 2;
 
     setTranslateX(containerCenter - cardCenter);
-  };
+  }, []); // Empty dependency array
 
   const handlePrev = () => {
     setOffsetIndex((prev) => prev - 1);
@@ -381,30 +363,29 @@ export const CardStyle6 = ({ cards = [] }) => {
     }
   };
 
+  // Update carousel when offsetIndex changes
   useEffect(() => {
     updateCarousel(offsetIndex);
-  }, [offsetIndex]);
+  }, [offsetIndex, updateCarousel]);
 
-  // Update on window resize
+  // Handle window resize
   useEffect(() => {
     const handleResize = () => {
       updateCarousel(offsetIndex);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [offsetIndex]);
+  }, [offsetIndex, updateCarousel]);
 
   if (!cards.length) return null;
 
   return (
     <CarouselWrapper>
       <ArrowButton onClick={handlePrev}>‹</ArrowButton>
-
       <CarouselContainer ref={containerRef}>
         <CardTrack style={{ transform: `translateX(${translateX}px)` }}>
           {infiniteCards.map((card, index) => {
             const isActive = index === offsetIndex;
-
             return (
               <CardItem
                 key={index}
@@ -421,7 +402,6 @@ export const CardStyle6 = ({ cards = [] }) => {
           })}
         </CardTrack>
       </CarouselContainer>
-
       <ArrowButton onClick={handleNext}>›</ArrowButton>
     </CarouselWrapper>
   );

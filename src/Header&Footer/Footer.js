@@ -13,16 +13,32 @@ export const Footer = () => {
             unforgettable experiences in the heart of nature.
           </p>
           <div className="social-links">
-            <a href="#" className="social-link" aria-label="Facebook">
+            <a
+              href="https://facebook.com"
+              className="social-link"
+              aria-label="Facebook"
+            >
               <span>📘</span>
             </a>
-            <a href="#" className="social-link" aria-label="Instagram">
+            <a
+              href="https://instagram.com"
+              className="social-link"
+              aria-label="Instagram"
+            >
               <span>📸</span>
             </a>
-            <a href="#" className="social-link" aria-label="Twitter">
+            <a
+              href="https://twitter.com"
+              className="social-link"
+              aria-label="Twitter"
+            >
               <span>🐦</span>
             </a>
-            <a href="#" className="social-link" aria-label="YouTube">
+            <a
+              href="https://youtube.com"
+              className="social-link"
+              aria-label="YouTube"
+            >
               <span>▶️</span>
             </a>
           </div>

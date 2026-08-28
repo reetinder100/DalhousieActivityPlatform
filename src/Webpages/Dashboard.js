@@ -20,7 +20,6 @@ import {
   ThingstoDoShort,
   TaxiBooking,
   adventureActivities,
-  alsolike,
 } from "../data/DashboardData";
 
 export const Dashboard = () => {

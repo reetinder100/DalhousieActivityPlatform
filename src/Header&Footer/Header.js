@@ -1,4 +1,4 @@
-import { HeaderContainer, HeaderSpacer } from "../styling/HeaderStyle";
+import { HeaderContainer } from "../styling/HeaderStyle";
 import { Link } from "react-router-dom";
 import { useScrollDirection } from "../Hooks/useScrollDirection";
 import { useNavigate } from "react-router-dom";
