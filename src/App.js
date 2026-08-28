@@ -288,11 +288,10 @@ function App() {
         <Route
           path="dashboard/popular-spots"
           element={
-            <BeforeChildrenContentData
-              data={popularSpotsData1}
+            <ContentData
+              Data={popularSpotsData1}
               title="Popular Spots"
               subtitle=""
-              buttonText="Book a Taxi for"
             />
           }
         />

@@ -24,7 +24,6 @@ import {
   MapSection,
   MapContainer,
 } from "../styling/ContactUsStyling";
-import { useNavigate } from "react-router-dom";
 import {
   HeroSection2,
   HeroContent,

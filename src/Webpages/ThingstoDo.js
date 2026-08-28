@@ -1,8 +1,4 @@
-import {
-  HeroContent,
-  HeroSection,
-  HeroSection2,
-} from "../styling/DashboardStyle";
+import { HeroSection2 } from "../styling/DashboardStyle";
 
 import { useClickOutside } from "../Hooks/Clickoutside";
 
@@ -72,36 +68,36 @@ export const ThingsToDo = () => {
     switch (CardStyle5Layout) {
       case "alternate1":
         return `
-          "position6 position5 position7 positionA"
-          "position3 position2 position4 positionB"
-          "position9 position8 position1 positionC"
-          "position13 position12 position10 positionD"
-          "position11 position14 position15 positionF"
-        `;
+        "position6 position5 position7 positionA"
+        "position3 position2 position4 positionB"
+        "position9 position8 position1 positionC"
+        "position13 position12 position10 positionD"
+        "position11 position14 position15 positionF"
+      `;
       case "alternate2":
         return `
-          "position4 positionB position2 positionA"
-          "position5 position8 position6 position3"
-          "position7 position1 position9 positionC"
-          "position13 position10 position12 positionD"
-          "position11 position14 position15 positionF"
-        `;
+        "position4 positionB position2 positionA"
+        "position5 position8 position6 position3"
+        "position7 position1 position9 positionC"
+        "position13 position10 position12 positionD"
+        "position11 position14 position15 positionF"
+      `;
       case "alternate3":
         return `
-          "position4 position8 position3 positionA"
-          "position1 position5 position6 positionB"
-          "position7 position2 position9 positionC"
-          "position13 position10 position12 positionD"
-          "position11 position14 position15 positionF"
-        `;
-      case "default":
+        "position4 position8 position3 positionA"
+        "position1 position5 position6 positionB"
+        "position7 position2 position9 positionC"
+        "position13 position10 position12 positionD"
+        "position11 position14 position15 positionF"
+      `;
+      default:
         return `
-          "position7 position4 position9 positionA"
-          "position5 position6 positionB position2"
-          "position1 position8 positionD position10"
-          "position13 position3 position12 positionE"
-           "position11 position14 position15 positionF"
-        `;
+        "position7 position4 position9 positionA"
+        "position5 position6 positionB position2"
+        "position1 position8 positionD position10"
+        "position13 position3 position12 positionE"
+        "position11 position14 position15 positionF"
+      `;
     }
   };
 

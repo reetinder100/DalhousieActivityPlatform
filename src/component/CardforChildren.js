@@ -44,7 +44,11 @@ const ContentData = ({
   showExploreButton = true,
 }) => {
   const handleExplore = (activity) => {
-    alert(`Exploring ${activity}!`);
+    // Replace with YOUR Google Form link
+    const googleFormUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSebcB7j3aadee7FyFU84AdJd1nFXp_UAJY5PfH7YpuUodM6VQ/viewform?usp=publish-editor";
+
+    window.open(googleFormUrl, "_blank");
   };
 
   // More flexible render function with optional parameters
