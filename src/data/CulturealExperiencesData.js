@@ -3,7 +3,7 @@ export const CulturalExperiences = [
     id: 1,
     title: "Local Festivals",
     description:
-      "Experience the vibrant cultural calendar of Dalhousie, from the lively Summer Festival in June with traditional Nati and Ghureli folk dances to the sacred Minjar Festival celebrating the harvest. Join the community around bonfires for Lohri, witness the spiritual fervor of Navratri, and enjoy the town's colonial-era Christmas and New Year celebrations that light up the winter months .",
+      "Experience the vibrant cultural calendar of Dalhousie, from the lively Summer Festival in June with traditional Nati and Ghureli folk dances to the sacred Minjar Festival celebrating the harvest. Join the community around bonfires for Lohri, witness the spiritual fervor of Navratri, and enjoy the town's colonial-era Christmas and New Year celebrations that light up the winter months.",
     imageContent: "🎭",
     image: "/images/images2/Dal-proj-img-culture-localfest.jpg",
     alt: "A colorful Himachali cultural festival in Dalhousie with dancers in traditional attire.",
@@ -13,7 +13,7 @@ export const CulturalExperiences = [
     id: 3,
     title: "Local Cuisine & Crafts",
     description:
-      "Savor the authentic flavors of Himachal Pradesh with local specialties like Dhaam, Tudkiya Bhath, and Chha Gosht. Explore bustling markets like Gandhi Chowk to shop for traditional handicrafts, including Chamba rumal (embroidered handkerchiefs), locally-spun woolen shawls, and wooden artifacts at places like the Himachal Emporium in Rang Mahal .",
+      "Savor the authentic flavors of Himachal Pradesh with local specialties like Dhaam, Tudkiya Bhath, and Chha Gosht. Explore bustling markets like Gandhi Chowk to shop for traditional handicrafts, including Chamba rumal (embroidered handkerchiefs), locally-spun woolen shawls, and wooden artifacts at places like the Himachal Emporium in Rang Mahal.",
     imageContent: "🧶",
     image: "/images/images2/Dal-proj-img-culture-localcuisine.jpg",
     alt: "Colorful Himachali woolen shawls and handicrafts on display in a Dalhousie market.",
@@ -23,7 +23,7 @@ export const CulturalExperiences = [
     id: 4,
     title: "Spiritual & Heritage Sites",
     description:
-      "Discover the religious harmony and ancient traditions of the region. Visit the 700-year-old Chamunda Devi Temple, explore the unique Rang Mahal, a confluence of Mughal and British architecture with Hindu mythological paintings. Pay respects at the tranquil Subhash Baoli, where freedom fighter Subhash Chandra Bose meditated, or explore the serene Kalatop Wildlife Sanctuary .",
+      "Discover the religious harmony and ancient traditions of the region. Visit the 700-year-old Chamunda Devi Temple, explore the unique Rang Mahal, a confluence of Mughal and British architecture with Hindu mythological paintings. Pay respects at the tranquil Subhash Baoli, where freedom fighter Subhash Chandra Bose meditated, or explore the serene Kalatop Wildlife Sanctuary.",
     imageContent: "🛕",
     image: "/images/images2/Dal-proj-img-culture-spiritual.jpg",
     alt: "The ancient Chamunda Devi Temple near Dalhousie, a significant spiritual and cultural site.",
@@ -59,7 +59,7 @@ export const gaddiCultureData = [
     id: 1,
     title: "Gaddi Tribe - The Nomadic Shepherds",
     description:
-      "The Gaddi tribe, a semi-nomadic agro-pastoralist community, is indigenous to the Chamba region, including areas around Dalhousie. Their main occupation is herding sheep and goats in the high Himalayas around the Dhauladhar, Chamba, and Bharmaur mountains. Women spin wool on a charkha, while men use a wooden instrument called Khhade to weave it into blankets. They live in impermanent accommodations called Hadwari and communicate in the Gaddi language[citation:1]. The Scheduled Tribe status is reserved for Gaddi Rajputs and Brahmans[citation:7].",
+      "The Gaddi tribe, a semi-nomadic agro-pastoralist community, is indigenous to the Chamba region, including areas around Dalhousie. Their main occupation is herding sheep and goats in the high Himalayas around the Dhauladhar, Chamba, and Bharmaur mountains. Women spin wool on a charkha, while men use a wooden instrument called Khhade to weave it into blankets. They live in impermanent accommodations called Hadwari and communicate in the Gaddi language. The Scheduled Tribe status is reserved for Gaddi Rajputs and Brahmans.",
     imageContent: "🐑",
     image: "/gaddi_tribe.jpg",
     alt: "Gaddi shepherds herding sheep and goats in the Himalayan mountains of Himachal Pradesh.",
@@ -69,7 +69,7 @@ export const gaddiCultureData = [
     id: 2,
     title: "Gaddi Traditions & Rituals",
     description:
-      "The Gaddi community maintains strict traditions and unique cultural practices. Their identity is deeply connected to rituals like Nawala, a sacrificial offering to Shiva[citation:5]. Their homeland is called Gadderan, considered the royal seat of their supreme deity, Lord Shiva, who like the Gaddis is a nomad and sheep herder[citation:6]. The Gaddis are primarily Shaivite in their spiritual beliefs[citation:9]. Their cultural pattern has faced substantial changes due to contact with the outside world[citation:1], but the community continues to preserve their ancestral traditions.",
+      "The Gaddi community maintains strict traditions and unique cultural practices. Their identity is deeply connected to rituals like Nawala, a sacrificial offering to Shiva. Their homeland is called Gadderan, considered the royal seat of their supreme deity, Lord Shiva, who like the Gaddis is a nomad and sheep herder. The Gaddis are primarily Shaivite in their spiritual beliefs. Their cultural pattern has faced substantial changes due to contact with the outside world, but the community continues to preserve their ancestral traditions.",
     imageContent: "🔥",
     image: "/gaddi_rituals.jpg",
     alt: "Traditional Gaddi ritual performance with musicians and singers in a Himalayan village.",

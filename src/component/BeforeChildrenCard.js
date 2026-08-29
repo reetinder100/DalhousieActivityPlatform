@@ -94,11 +94,6 @@ const BeforeChildrenContentData = ({
       onExplore,
       className = "",
     } = options;
-
-    if (!data || data.length === 0) {
-      return <p>No activities available</p>;
-    }
-
     if (type === "main") {
       const activity = data[selectedIndex || 0];
       return (

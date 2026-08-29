@@ -125,7 +125,7 @@ function App() {
             <ContentData
               Data={SportsRecreationData}
               title="Sports & Recreation"
-              subtitle=""
+              subtitle="Sports & Recreation feature is currently not available. Please check back later."
               showExploreButton={false}
             />
           }
@@ -163,8 +163,8 @@ function App() {
         <Route
           path="/things-to-do/Hiking-trails"
           element={
-            <ContentData
-              Data={hikingTrailsData}
+            <TrailsGuide
+              trails={hikingTrailsData}
               title="Hiking Trails"
               subtitle=""
             />
@@ -173,7 +173,12 @@ function App() {
         <Route
           path="/things-to-do/Churches"
           element={
-            <ContentData Data={churchesData} title="Churches" subtitle="" />
+            <ContentData
+              Data={churchesData}
+              title="Churches"
+              subtitle=""
+              showImages={false}
+            />
           }
         />
         <Route
@@ -184,6 +189,7 @@ function App() {
               title="History of Dalhousie"
               subtitle=""
               showExploreButton={false}
+              showImages={false}
             />
           }
         />
@@ -201,6 +207,7 @@ function App() {
               title="Chambyali Culture"
               subtitle=""
               showExploreButton={false}
+              showImages={false}
             />
           }
         />
@@ -212,6 +219,7 @@ function App() {
               title="Gaddi Culture"
               subtitle=""
               showExploreButton={false}
+              showImages={false}
             />
           }
         />
@@ -223,6 +231,7 @@ function App() {
               title="Local Food"
               subtitle=""
               showExploreButton={false}
+              showImages={false}
             />
           }
         />
@@ -240,6 +249,7 @@ function App() {
               title="Flora & Fauna"
               subtitle=""
               showExploreButton={false}
+              showImages={false}
             />
           }
         />
@@ -387,6 +397,17 @@ function App() {
           element={
             <TrailsGuide
               trails={mountainBikingDalhousie}
+              title="Mountain Biking in Dalhousie & Chamba"
+              subtitle=""
+            />
+          }
+        />
+
+        <Route
+          path="/activities/Campin-Sites"
+          element={
+            <TrailsGuide
+              trails={campingSitesDalhousie}
               title="Mountain Biking in Dalhousie & Chamba"
               subtitle=""
             />

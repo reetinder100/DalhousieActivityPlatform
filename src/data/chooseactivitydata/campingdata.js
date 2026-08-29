@@ -3,7 +3,7 @@ export const campingSitesDalhousie = [
     id: 1,
     title: "Nomadic Camp Dalhousie",
     description:
-      "A peaceful camping retreat nestled in dense deodar, pine, and fir forests near Pathankot Road. Perfect for beginners and nature lovers, offering a tranquil environment with cooperative staff and good food. Enjoy trekking, boating, and exploring nearby scenic spots like Panchpula Waterfall and Satdhara Springs[citation:3][citation:9].",
+      "A peaceful camping retreat nestled in dense deodar, pine, and fir forests near Pathankot Road. Perfect for beginners and nature lovers, offering a tranquil environment with cooperative staff and good food. Enjoy trekking, boating, and exploring nearby scenic spots like Panchpula Waterfall and Satdhara Springs.",
     imageContent: "⛺",
     reverse: false,
     length: "N/A",
@@ -13,14 +13,14 @@ export const campingSitesDalhousie = [
     bestSeason: "March to June, September to December",
     trailType: "Camping",
     facilities:
-      "Tents, Shared Kitchen, BBQ, Bonfire, Adventure Café, 24/7 Front Desk, Bike Tours, Walking Tours[citation:9]",
+      "Tents, Shared Kitchen, BBQ, Bonfire, Adventure Café, 24/7 Front Desk, Bike Tours, Walking Tours",
     activityType: "Camping",
   },
   {
     id: 2,
     title: "Ganji Pahari Trekking Camp",
     description:
-      "A must-visit camping and trekking spot near the Bakrota Hills. The name 'Ganji Pahari' translates to 'Bald Hill,' and offers a 2 km trek suitable for both experienced trekkers and beginners. Witness breathtaking panoramic views of the Dhauladhar Range and Pir Panjal range covered in thick ice. At 9,000 feet, the peak offers stunning views of mud houses and the entire Dalhousie valley[citation:2][citation:3].",
+      "A must-visit camping and trekking spot near the Bakrota Hills. The name 'Ganji Pahari' translates to 'Bald Hill,' and offers a 2 km trek suitable for both experienced trekkers and beginners. Witness breathtaking panoramic views of the Dhauladhar Range and Pir Panjal range covered in thick ice. At 9,000 feet, the peak offers stunning views of mud houses and the entire Dalhousie valley.",
     imageContent: "🏕️",
     reverse: true,
     length: "2 km",
@@ -30,14 +30,14 @@ export const campingSitesDalhousie = [
     bestSeason: "January to June, September to December",
     trailType: "Out & Back",
     facilities:
-      "Mud house stay, Local food (tea & Maggi), Guided treks available[citation:2]",
+      "Mud house stay, Local food (tea & Maggi), Guided treks available",
     activityType: "Camping",
   },
   {
     id: 3,
     title: "Himalayan Rock Valley Camping",
     description:
-      "A highly-rated camping site located in Village Lohlikhad, Post office Bathri. With excellent reviews (4.8/5 rating), this site offers a serene mountain experience with stunning valley views and comfortable tent accommodations[citation:4].",
+      "A highly-rated camping site located in Village Lohlikhad, Post office Bathri. With excellent reviews (4.8/5 rating), this site offers a serene mountain experience with stunning valley views and comfortable tent accommodations.",
     imageContent: "🏔️",
     reverse: false,
     length: "N/A",
@@ -46,14 +46,14 @@ export const campingSitesDalhousie = [
     elevationGain: "N/A",
     bestSeason: "April to November",
     trailType: "Camping",
-    facilities: "Alpine Tents, Mountain Views, Nearby Restaurants[citation:4]",
+    facilities: "Alpine Tents, Mountain Views, Nearby Restaurants",
     activityType: "Camping",
   },
   {
     id: 4,
     title: "Dalhousian Camping Panchpula",
     description:
-      "A charming camping getaway located in the picturesque surroundings of Panchpula. Perfect for those seeking tranquility in nature with a garden, indoor pool, and pet-friendly options. Located approximately 5 miles from Khajjiar and 27 miles from McLeod Ganj[citation:10].",
+      "A charming camping getaway located in the picturesque surroundings of Panchpula. Perfect for those seeking tranquility in nature with a garden, indoor pool, and pet-friendly options. Located approximately 5 miles from Khajjiar and 27 miles from McLeod Ganj.",
     imageContent: "🌲",
     reverse: true,
     length: "N/A",
@@ -63,14 +63,14 @@ export const campingSitesDalhousie = [
     bestSeason: "March to November",
     trailType: "Camping",
     facilities:
-      "Free Parking, Garden, Indoor Pool, Beachfront, Vegetarian Breakfast, Pets Allowed[citation:10]",
+      "Free Parking, Garden, Indoor Pool, Beachfront, Vegetarian Breakfast, Pets Allowed",
     activityType: "Camping",
   },
   {
     id: 5,
     title: "Nature Camping at Panchpula",
     description:
-      "Experience nature and adventure at its best with this well-equipped campsite in Panchpula. Surrounded by picturesque mountains and green valleys, the site features Alpine tents with proper bedding, dining, and washroom facilities. Enjoy bonfire with music, stargazing, and trekking to Ganji Pahari (5 km guided trek available)[citation:6].",
+      "Experience nature and adventure at its best with this well-equipped campsite in Panchpula. Surrounded by picturesque mountains and green valleys, the site features Alpine tents with proper bedding, dining, and washroom facilities. Enjoy bonfire with music, stargazing, and trekking to Ganji Pahari (5 km guided trek available).",
     imageContent: "🔥",
     reverse: false,
     length: "5 km (Ganji Pahari Trek)",
@@ -80,14 +80,14 @@ export const campingSitesDalhousie = [
     bestSeason: "April to November",
     trailType: "Camping",
     facilities:
-      "Alpine Tents, Bedding, Common Washrooms, Dining Area, Bonfire, Music, Stargazing, Meals Included (Breakfast, Lunch, Dinner)[citation:6]",
+      "Alpine Tents, Bedding, Common Washrooms, Dining Area, Bonfire, Music, Stargazing, Meals Included (Breakfast, Lunch, Dinner)",
     activityType: "Camping",
   },
   {
     id: 6,
     title: "Camping at Dainkund Peak",
     description:
-      "Camp under the stars at the highest peak in Dalhousie. Surrounded by ramrod straight pines and conifers, this is a once-in-a-lifetime experience. The peak offers stunning 360-degree views of the Pir Panjal range and lush valleys[citation:11][citation:5].",
+      "Camp under the stars at the highest peak in Dalhousie. Surrounded by ramrod straight pines and conifers, this is a once-in-a-lifetime experience. The peak offers stunning 360-degree views of the Pir Panjal range and lush valleys.",
     imageContent: "🏔️",
     reverse: true,
     length: "N/A",
@@ -96,15 +96,14 @@ export const campingSitesDalhousie = [
     elevationGain: "2755 m",
     bestSeason: "April to June, September to November",
     trailType: "Camping",
-    facilities:
-      "Stargazing, Bonfire, Pine Forests, Mountain Views[citation:11]",
+    facilities: "Stargazing, Bonfire, Pine Forests, Mountain Views",
     activityType: "Camping",
   },
   {
     id: 7,
     title: "Camping at Kalatop Wildlife Sanctuary",
     description:
-      "Set up camp near the pristine forests of Kalatop Wildlife Sanctuary, spread across 30.69 sq km. This is a perfect base for wildlife enthusiasts wanting to spot Himalayan black bears, leopards, barking deer, and over 100 bird species[citation:5].",
+      "Set up camp near the pristine forests of Kalatop Wildlife Sanctuary, spread across 30.69 sq km. This is a perfect base for wildlife enthusiasts wanting to spot Himalayan black bears, leopards, barking deer, and over 100 bird species.",
     imageContent: "🌿",
     reverse: false,
     length: "N/A",
@@ -113,7 +112,7 @@ export const campingSitesDalhousie = [
     elevationGain: "N/A",
     bestSeason: "March to June, October to December",
     trailType: "Camping",
-    facilities: "Wildlife Viewing, Nature Walks, Forest Campsite[citation:5]",
+    facilities: "Wildlife Viewing, Nature Walks, Forest Campsite",
     activityType: "Camping",
   },
 ];

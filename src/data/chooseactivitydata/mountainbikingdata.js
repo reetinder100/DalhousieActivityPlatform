@@ -3,7 +3,7 @@ export const mountainBikingDalhousie = [
     id: 1,
     title: "Kalatop Wildlife Sanctuary Bike Trail",
     description:
-      "Cycle through the dense forests of oak, pine, and deodar trees in the Kalatop Wildlife Sanctuary. The trails are ideal for mountain biking while spotting wildlife like Himalayan black bears, barking deer, leopards, and over 100 bird species [citation:5][citation:7]. The sanctuary offers a thrilling ride through pristine wilderness with varying terrain [citation:7].",
+      "Cycle through the dense forests of oak, pine, and deodar trees in the Kalatop Wildlife Sanctuary. The trails are ideal for mountain biking while spotting wildlife like Himalayan black bears, barking deer, leopards, and over 100 bird species. The sanctuary offers a thrilling ride through pristine wilderness with varying terrain.",
     imageContent: "🚵",
     reverse: false,
     length: "N/A (Multiple trails available)",
@@ -20,7 +20,7 @@ export const mountainBikingDalhousie = [
     id: 2,
     title: "Khajjiar Meadow Cycling",
     description:
-      "Known as the 'Mini Switzerland of India,' Khajjiar offers a beautiful cycling experience across its sprawling green meadows [citation:3][citation:9]. Surrounded by deodar forests and snow-capped peaks, this gentle ride is perfect for all skill levels [citation:11]. The meadow's circular trail around Khajjiar Lake offers a scenic and relaxed biking experience [citation:9].",
+      "Known as the 'Mini Switzerland of India,' Khajjiar offers a beautiful cycling experience across its sprawling green meadows. Surrounded by deodar forests and snow-capped peaks, this gentle ride is perfect for all skill levels. The meadow's circular trail around Khajjiar Lake offers a scenic and relaxed biking experience.",
     imageContent: "🏞️",
     reverse: true,
     length: "2-3 km (Lake Circuit)",
@@ -37,7 +37,7 @@ export const mountainBikingDalhousie = [
     id: 3,
     title: "Dalhousie to Khajjiar Mountain Bike Route",
     description:
-      "A scenic 22 km mountain biking route connecting Dalhousie to Khajjiar through winding roads and thick pine forests [citation:5]. This route offers stunning views of the surrounding hills and valleys, making it one of the most popular biking experiences in the region [citation:11]. The route passes through the iconic Kalatop Wildlife Sanctuary and offers breathtaking Himalayan views.",
+      "A scenic 22 km mountain biking route connecting Dalhousie to Khajjiar through winding roads and thick pine forests. This route offers stunning views of the surrounding hills and valleys, making it one of the most popular biking experiences in the region. The route passes through the iconic Kalatop Wildlife Sanctuary and offers breathtaking Himalayan views.",
     imageContent: "🏔️",
     reverse: false,
     length: "22 km",
@@ -54,7 +54,7 @@ export const mountainBikingDalhousie = [
     id: 4,
     title: "Chain Lakes Mountain Bike Loop",
     description:
-      "A 25.8 km intermediate mountain bike loop from Dalhousie Road that takes you through scenic landscapes to the Chain Lakes and East Twin Lake [citation:6]. The trail features a mix of surfaces including cycleways, streets, and unpaved paths, with a moderate elevation gain of 160 meters [citation:6]. Suitable for riders with good fitness levels.",
+      "A 25.8 km intermediate mountain bike loop from Dalhousie Road that takes you through scenic landscapes to the Chain Lakes and East Twin Lake. The trail features a mix of surfaces including cycleways, streets, and unpaved paths, with a moderate elevation gain of 160 meters. Suitable for riders with good fitness levels.",
     imageContent: "🌲",
     reverse: true,
     length: "25.8 km",
@@ -71,7 +71,7 @@ export const mountainBikingDalhousie = [
     id: 5,
     title: "Chamba Mountain Biking Trails",
     description:
-      "Chamba district is emerging as a hub for mountain biking, with scenic mountain routes suitable for cyclists of all levels [citation:4]. The region's varied terrain, from dirt tracks to single tracks, offers challenging and rewarding experiences [citation:4]. The area is being promoted as an emerging destination for cycling and outdoor adventure sports in Himachal Pradesh [citation:4].",
+      "Chamba district is emerging as a hub for mountain biking, with scenic mountain routes suitable for cyclists of all levels. The region's varied terrain, from dirt tracks to single tracks, offers challenging and rewarding experiences. The area is being promoted as an emerging destination for cycling and outdoor adventure sports in Himachal Pradesh.",
     imageContent: "⛰️",
     reverse: false,
     length: "Varies",

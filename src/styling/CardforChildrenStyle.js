@@ -59,6 +59,7 @@ export const Title = styled.h1`
   @media (max-width: 480px) {
     font-size: 1.5rem;
     margin-bottom: 4px;
+    margin-top: 35px;
   }
 `;
 
@@ -285,17 +286,7 @@ export const CardImage = styled.div`
 
   /* Mobile Small */
   @media (max-width: 480px) {
-    height: 180px;
-    min-height: 180px;
-    max-height: 180px;
+    aspect-ratio: 1/1;
     border-radius: 10px;
-  }
-
-  /* Mobile Extra Small */
-  @media (max-width: 380px) {
-    height: 150px;
-    min-height: 150px;
-    max-height: 150px;
-    border-radius: 8px;
   }
 `;

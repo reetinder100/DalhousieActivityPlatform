@@ -6,7 +6,7 @@ const outdoorActivities = [
     image: "/images/images2/Dal-proj-img-hiking1.jpg",
     alt: "Scenic hiking trails",
     description:
-      "Explore the beautiful hiking trails of Dalhousie, offering stunning views of the Dhauladhar Range and Pir Panjal range. Trails range from easy walks through pine forests to challenging treks to peaks like Dainkund and Ganji Pahari[citation:2][citation:3][citation:5].",
+      "Explore the beautiful hiking trails of Dalhousie, offering stunning views of the Dhauladhar Range and Pir Panjal range. Trails range from easy walks through pine forests to challenging treks to peaks like Dainkund and Ganji Pahari.",
     imageContent: "🥾",
   },
   {
@@ -15,7 +15,7 @@ const outdoorActivities = [
     image: "/images/images2/Dal-proj-img-camping1.jpg",
     alt: "Camping under the stars",
     description:
-      "Experience the thrill of camping amidst the pristine forests and valleys of Dalhousie. From Nomadic Camp near Pathankot Road to camping at Kalatop Wildlife Sanctuary, enjoy bonfires, stargazing, and the serenity of nature[citation:3][citation:6][citation:9].",
+      "Experience the thrill of camping amidst the pristine forests and valleys of Dalhousie. From Nomadic Camp near Pathankot Road to camping at Kalatop Wildlife Sanctuary, enjoy bonfires, stargazing, and the serenity of nature.",
     imageContent: "⛺",
   },
   {
@@ -24,7 +24,7 @@ const outdoorActivities = [
     image: "/images/images2/Dal-proj-img-paragliding1.jpg",
     alt: "Camping under the stars",
     description:
-      "Soar high above the 'Mini Switzerland of India' with paragliding over Khajjiar's lush green meadows and dense forests. Enjoy breathtaking aerial views of the surrounding Himalayan peaks and valleys[citation:8].",
+      "Soar high above the 'Mini Switzerland of India' with paragliding over Khajjiar's lush green meadows and dense forests. Enjoy breathtaking aerial views of the surrounding Himalayan peaks and valleys.",
     imageContent: "🪂",
   },
   {
@@ -33,7 +33,7 @@ const outdoorActivities = [
     image: "/images/images2/Dal-proj-img-rope1.jpg",
     alt: "Camping under the stars",
     description:
-      "Challenge yourself with exciting rope activities including zip-lining, rock climbing, and rope bridges amidst the beautiful natural surroundings of Dalhousie. Perfect for adventure seekers and team-building[citation:6].",
+      "Challenge yourself with exciting rope activities including zip-lining, rock climbing, and rope bridges amidst the beautiful natural surroundings of Dalhousie. Perfect for adventure seekers and team-building.",
     imageContent: "🧗",
   },
   {
@@ -42,7 +42,7 @@ const outdoorActivities = [
     image: "/images/images2/Dal-proj-img-river1.jpg",
     alt: "Water adventure activities",
     description:
-      "Enjoy an adrenaline-pumping river rafting experience on the Ravi River near Dalhousie. Navigate through thrilling rapids while surrounded by breathtaking mountain scenery and lush forests[citation:7].",
+      "Enjoy an adrenaline-pumping river rafting experience on the Ravi River near Dalhousie. Navigate through thrilling rapids while surrounded by breathtaking mountain scenery and lush forests.",
     imageContent: "🚣",
   },
   {
@@ -51,7 +51,7 @@ const outdoorActivities = [
     image: "/images/images2/Dal-proj-img-biking1.jpg",
     alt: "Mountain Biking activities",
     description:
-      "Explore the scenic mountain trails of Dalhousie on a mountain bike. Ride through dense pine and deodar forests with stunning views of the Dhauladhar Range and the picturesque valleys[citation:9].",
+      "Explore the scenic mountain trails of Dalhousie on a mountain bike. Ride through dense pine and deodar forests with stunning views of the Dhauladhar Range and the picturesque valleys.",
     imageContent: "🚵",
   },
 ];

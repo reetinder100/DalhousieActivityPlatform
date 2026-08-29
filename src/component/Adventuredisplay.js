@@ -193,15 +193,12 @@ export const TrailCard = ({
   };
 
   const handleBooking = (type) => {
-    if (type === "cab" && onBookCab) {
-      onBookCab(trail);
-    } else if (type === "guide" && onBookGuide) {
-      onBookGuide(trail);
-    } else {
-      alert(
-        `📞 Booking request for "${getField("title")}"\n\nService: ${type === "cab" ? "🚗 Taxi / Cab Booking" : "🗺️ Guide / Trekking Expert"}\n\nA representative will contact you shortly.`,
-      );
-    }
+    const trailTitle = getField("title") || "Adventure Activity";
+    const serviceType = type === "cab" ? "🚗 Cab Booking" : "🗺️ Guide Booking";
+
+    const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSf2VGt2VKsQ-8RXYn8JuAU_8FaYoCZ37SgtwN4aLbe9BJKfjw/viewform?usp=dialog`;
+
+    window.open(formUrl, "_blank");
   };
 
   const category = getCategory(trail);

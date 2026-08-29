@@ -18,6 +18,7 @@ const CardItem = ({
   reverse = false,
   onExplore,
   showExploreButton = true,
+  showImage = true, // New prop for image visibility
 }) => {
   return (
     <Card style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
@@ -30,9 +31,11 @@ const CardItem = ({
           </ExploreButton>
         )}
       </CardContent>
-      <CardImage>
-        <img src={image} alt={title} />
-      </CardImage>
+      {showImage && image && (
+        <CardImage>
+          <img src={image} alt={title} />
+        </CardImage>
+      )}
     </Card>
   );
 };
@@ -42,6 +45,7 @@ const ContentData = ({
   title = "",
   subtitle = "",
   showExploreButton = true,
+  showImages = true, // Feature flag for images (default: true)
 }) => {
   const handleExplore = (activity) => {
     // Replace with YOUR Google Form link
@@ -56,9 +60,10 @@ const ContentData = ({
     data = Data,
     onExplore = handleExplore,
     showExploreButtons = showExploreButton,
+    showImage = showImages, // Pass the image flag
   ) => {
     if (!data || data.length === 0) {
-      return <p>No activities available</p>;
+      return null;
     }
 
     return data.map((card) => (
@@ -70,6 +75,7 @@ const ContentData = ({
         reverse={card.reverse}
         onExplore={onExplore}
         showExploreButton={showExploreButtons}
+        showImage={showImage}
       />
     ));
   };
@@ -81,10 +87,6 @@ const ContentData = ({
         <MainSubtitle>{subtitle}</MainSubtitle>
 
         {renderCards()}
-
-        {/* You could also render filtered cards like this:
-        {renderCards(cardData.filter(card => card.id <= 3))}
-        */}
       </Container>
     </Wrapper>
   );

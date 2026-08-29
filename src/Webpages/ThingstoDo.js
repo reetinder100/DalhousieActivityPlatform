@@ -1,4 +1,4 @@
-import { HeroSection2 } from "../styling/DashboardStyle";
+import { HeroSection3 } from "../styling/DashboardStyle";
 
 import { useClickOutside } from "../Hooks/Clickoutside";
 
@@ -167,7 +167,7 @@ export const ThingsToDo = () => {
 
   return (
     <div>
-      <HeroSection2>...</HeroSection2>
+      <HeroSection3>...</HeroSection3>
 
       {/* Choose Your Activity Section */}
       <CardContainer>

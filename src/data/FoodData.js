@@ -42,7 +42,7 @@ export const localFoodData = [
     id: 1,
     title: "Dhaam - The Traditional Thali",
     description:
-      "Dhaam is the ultimate traditional Himachali meal served during festivals and special occasions. This elaborate thali includes rajma, madra, chana dal, kadhi, boondi raita, and sweet rice, all served on leaf plates and prepared by special chefs known as 'botis' [citation:1][citation:2]. The Chamba region's Dhaam, known as Chambyali Dham, features dishes like madra, rajmah, kaala chana, and gucchi (local mushroom) pulao, all cooked with generous amounts of ghee [citation:6]. A nutritionally complete and Ayurvedic meal, the preparation begins early in the evening to ensure perfect flavors [citation:10].",
+      "Dhaam is the ultimate traditional Himachali meal served during festivals and special occasions. This elaborate thali includes rajma, madra, chana dal, kadhi, boondi raita, and sweet rice, all served on leaf plates and prepared by special chefs known as 'botis'. The Chamba region's Dhaam, known as Chambyali Dham, features dishes like madra, rajmah, kaala chana, and gucchi (local mushroom) pulao, all cooked with generous amounts of ghee. A nutritionally complete and Ayurvedic meal, the preparation begins early in the evening to ensure perfect flavors.",
     imageContent: "🍛",
     image: "/dhaam_thali.jpg",
     alt: "Traditional Himachali Dhaam thali served on a leaf plate with various curries, rice, and sweets.",
@@ -52,7 +52,7 @@ export const localFoodData = [
     id: 2,
     title: "Tudkiya Bhath - Flavoured Pulao",
     description:
-      "Tudkiya Bhath is the authentic Himachali pulao that is much more flavourful than its ordinary counterpart. Made with small grain rice, lentils, potatoes, and yoghurt, it is cooked with onions, tomatoes, garlic, cinnamon, cardamom, and unusual spices like karpathi, dagad phool, mace, and star anise [citation:2][citation:10]. This hearty and satisfying dish is perfect comfort food after a long day of exploring Dalhousie [citation:1].",
+      "Tudkiya Bhath is the authentic Himachali pulao that is much more flavourful than its ordinary counterpart. Made with small grain rice, lentils, potatoes, and yoghurt, it is cooked with onions, tomatoes, garlic, cinnamon, cardamom, and unusual spices like karpathi, dagad phool, mace, and star anise. This hearty and satisfying dish is perfect comfort food after a long day of exploring Dalhousie.",
     imageContent: "🍚",
     image: "/tudkiya_bhath.jpg",
     alt: "Flavourful Himachali Tudkiya Bhath pulao with lentils, potatoes, and aromatic spices.",
@@ -62,7 +62,7 @@ export const localFoodData = [
     id: 3,
     title: "Madra - Creamy Chickpea Curry",
     description:
-      "Madra is one of the most famous dishes in Himachal Pradesh, featuring chickpeas cooked in a rich, creamy yoghurt-based gravy with spices. The Chamba version is a delicacy known for its unique preparation—boiling rajma and discarding the water, then boiling equal quantities of milk and ghee until the milk almost disappears, before adding the rajma and spices [citation:3]. This tangy, creamy dish is best enjoyed with steamed rice and is a staple at weddings and buffets [citation:1][citation:10].",
+      "Madra is one of the most famous dishes in Himachal Pradesh, featuring chickpeas cooked in a rich, creamy yoghurt-based gravy with spices. The Chamba version is a delicacy known for its unique preparation—boiling rajma and discarding the water, then boiling equal quantities of milk and ghee until the milk almost disappears, before adding the rajma and spices. This tangy, creamy dish is best enjoyed with steamed rice and is a staple at weddings and buffets.",
     imageContent: "🥘",
     image: "/madra_curry.jpg",
     alt: "Creamy Himachali Madra curry with chickpeas in a rich yoghurt-based gravy.",
@@ -72,7 +72,7 @@ export const localFoodData = [
     id: 4,
     title: "Aktori - Buckwheat Pancake",
     description:
-      "Aktori is a traditional buckwheat pancake made from kuttu flour, hailing from the arid valleys of Himachal Pradesh. Served hot with ghee or honey, it is a light and wholesome breakfast dish perfect for the chilly weather [citation:1][citation:10]. One of the most authentic Himachali breakfast dishes, it is especially popular during winter and offers a delightful taste of local mountain cuisine [citation:1].",
+      "Aktori is a traditional buckwheat pancake made from kuttu flour, hailing from the arid valleys of Himachal Pradesh. Served hot with ghee or honey, it is a light and wholesome breakfast dish perfect for the chilly weather. One of the most authentic Himachali breakfast dishes, it is especially popular during winter and offers a delightful taste of local mountain cuisine.",
     imageContent: "🥞",
     image: "/aktori_pancake.jpg",
     alt: "Traditional Himachali Aktori buckwheat pancakes served hot with ghee or honey.",
@@ -82,7 +82,7 @@ export const localFoodData = [
     id: 5,
     title: "Babru - Himachali Stuffed Puri",
     description:
-      "Often called the Himachali version of stuffed puri, Babru is a crispy, deep-fried bread made with wheat dough stuffed with black gram paste. Popular in Mandi, Kangra, and Chamba, there are both sweet and savoury versions—stuffed with jaggery syrup or soaked urad dal respectively [citation:14]. This spiced treat is similar to bhatura across North India and is best enjoyed with tamarind chutney [citation:9]. Great as a quick snack, it is crispy, indulgent, and unique to Himachal [citation:1].",
+      "Often called the Himachali version of stuffed puri, Babru is a crispy, deep-fried bread made with wheat dough stuffed with black gram paste. Popular in Mandi, Kangra, and Chamba, there are both sweet and savoury versions—stuffed with jaggery syrup or soaked urad dal respectively. This spiced treat is similar to bhatura across North India and is best enjoyed with tamarind chutney. Great as a quick snack, it is crispy, indulgent, and unique to Himachal.",
     imageContent: "🥟",
     image: "/babru_puri.jpg",
     alt: "Crispy Himachali Babru stuffed puris served with chutney.",
@@ -92,7 +92,7 @@ export const localFoodData = [
     id: 6,
     title: "Chha Gosht - Curried Lamb",
     description:
-      "Chha Gosht is a mouth-watering lamb delicacy popular throughout Himachal Pradesh. The tender meat is marinated with spices and cooked in a tangy, yoghurt-based gravy [citation:10]. A perfect treat for non-vegetarians, this curried lamb dish is often paired with rice or roti for a satisfying meal [citation:15].",
+      "Chha Gosht is a mouth-watering lamb delicacy popular throughout Himachal Pradesh. The tender meat is marinated with spices and cooked in a tangy, yoghurt-based gravy. A perfect treat for non-vegetarians, this curried lamb dish is often paired with rice or roti for a satisfying meal.",
     imageContent: "🍖",
     image: "/chha_gosht.jpg",
     alt: "Tender Himachali Chha Gosht lamb curry in a rich yoghurt-based gravy.",
@@ -102,7 +102,7 @@ export const localFoodData = [
     id: 7,
     title: "Mittha - Sweet Rice Dessert",
     description:
-      "Mittha is a traditional Himachali dessert made with rice, jaggery, and ghee, often including dry fruits or coconut. This sweet dish is considered one of the best to satisfy a sweet tooth and is commonly prepared during important events and festivals [citation:10][citation:1]. In the Chamba region, it is known as meetha chawal, cooked with almonds, raisins, and cardamom, and served as the final course of a meal [citation:3].",
+      "Mittha is a traditional Himachali dessert made with rice, jaggery, and ghee, often including dry fruits or coconut. This sweet dish is considered one of the best to satisfy a sweet tooth and is commonly prepared during important events and festivals. In the Chamba region, it is known as meetha chawal, cooked with almonds, raisins, and cardamom, and served as the final course of a meal.",
     imageContent: "🍮",
     image: "/mittha_dessert.jpg",
     alt: "Traditional Himachali Mittha sweet rice dessert with jaggery, ghee, and dry fruits.",
@@ -112,7 +112,7 @@ export const localFoodData = [
     id: 8,
     title: "Patande - Himachali Pancake",
     description:
-      "Patande is an iconic breakfast option in Himachal Pradesh that is somewhere between a dosa and a crepe. Made with a rich blend of sugar, milk, and wheat flour, these thin pancakes are cooked to perfection and served with honey, jaggery, or chutney [citation:1][citation:10]. Sweet, simple, and comforting, Patande is ideal for a morning meal in Dalhousie [citation:1].",
+      "Patande is an iconic breakfast option in Himachal Pradesh that is somewhere between a dosa and a crepe. Made with a rich blend of sugar, milk, and wheat flour, these thin pancakes are cooked to perfection and served with honey, jaggery, or chutney. Sweet, simple, and comforting, Patande is ideal for a morning meal in Dalhousie.",
     imageContent: "🥞",
     image: "/patande_pancake.jpg",
     alt: "Thin Himachali Patande pancakes served with honey and chutney.",

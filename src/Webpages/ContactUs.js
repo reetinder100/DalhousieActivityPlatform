@@ -129,7 +129,7 @@ export const ContactUs = () => {
                     onClick={() => handleContactClick("phone")}
                     style={{ cursor: "pointer", color: "#667eea" }}
                   >
-                    +91 98765 43210
+                    +91 9317323711
                   </InfoText>
                 </InfoContent>
               </ContactInfoCard>
@@ -142,7 +142,7 @@ export const ContactUs = () => {
                     onClick={() => handleContactClick("email")}
                     style={{ cursor: "pointer", color: "#667eea" }}
                   >
-                    info@dhauladharadventure.com
+                    rsingh12_be18@thapar.edu
                   </InfoText>
                 </InfoContent>
               </ContactInfoCard>

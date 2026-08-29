@@ -19,40 +19,43 @@ const BikeRentalSection = ({
   title = "Rent a Bike in Dalhousie",
   subtitle = "Explore the hills with our premium bike rental service",
 }) => {
+  const isFeatureEnabled = false;
+
   const handleBook = (bikeName) => {
     console.log(`Booking ${bikeName}`);
-    // Navigate to booking page
-    // navigate(`/book-bike/${bikeName.toLowerCase().replace(/\s+/g, '-')}`);
   };
 
   return (
     <Wrapper>
       <Container>
         <Title>{title}</Title>
-        <MainSubtitle>{subtitle}</MainSubtitle>
+        <MainSubtitle>
+          {isFeatureEnabled ? subtitle : "🔧 Service currently unavailable"}
+        </MainSubtitle>
 
-        {bikeRentalData.map((bike) => (
-          <Card
-            key={bike.id}
-            style={{ flexDirection: bike.reverse ? "row-reverse" : "row" }}
-          >
-            <CardContent>
-              <CardTitle>{bike.name}</CardTitle>
-              <BikeType>
-                {bike.type} • {bike.category}
-              </BikeType>
-              <CardDescription>{bike.description}</CardDescription>
-              <PriceTag>{bike.pricePerDay} / day</PriceTag>
-              <Rating>
-                ⭐ {bike.rating} ({bike.totalReviews} reviews)
-              </Rating>
-              <ExploreButton onClick={() => handleBook(bike.name)}>
-                Book Now
-              </ExploreButton>
-            </CardContent>
-            <CardImage>{bike.imageContent}</CardImage>
-          </Card>
-        ))}
+        {isFeatureEnabled &&
+          bikeRentalData.map((bike) => (
+            <Card
+              key={bike.id}
+              style={{ flexDirection: bike.reverse ? "row-reverse" : "row" }}
+            >
+              <CardContent>
+                <CardTitle>{bike.name}</CardTitle>
+                <BikeType>
+                  {bike.type} • {bike.category}
+                </BikeType>
+                <CardDescription>{bike.description}</CardDescription>
+                <PriceTag>{bike.pricePerDay} / day</PriceTag>
+                <Rating>
+                  ⭐ {bike.rating} ({bike.totalReviews} reviews)
+                </Rating>
+                <ExploreButton onClick={() => handleBook(bike.name)}>
+                  Book Now
+                </ExploreButton>
+              </CardContent>
+              <CardImage>{bike.imageContent}</CardImage>
+            </Card>
+          ))}
       </Container>
     </Wrapper>
   );

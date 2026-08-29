@@ -396,6 +396,39 @@ export const HeroSection2 = styled.div`
   }
 `;
 
+export const HeroSection3 = styled.div`
+  width: 100%;
+  height: 600px;
+  background-image: url("/images/Dal-proj-img28.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  /* Optional: Add overlay for better text readability */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    height: 250px;
+  }
+`;
+
 export const HeroContent = styled.div`
   position: relative;
   z-index: 1;

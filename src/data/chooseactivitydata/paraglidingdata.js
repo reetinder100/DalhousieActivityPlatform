@@ -3,7 +3,7 @@ export const paraglidingSitesDalhousie = [
     id: 1,
     title: "Paragliding at Khajjiar",
     description:
-      "Known as the 'Mini Switzerland of India,' Khajjiar is the premier paragliding destination near Dalhousie. The vast meadow is surrounded by thick deodar forests and offers stunning views of the Dhauladhar range. Taking off from this picturesque spot allows you to soar like a bird over green fields and serene landscapes, making it perfect for both beginners and experienced flyers [citation:1][citation:4][citation:5].",
+      "Known as the 'Mini Switzerland of India,' Khajjiar is the premier paragliding destination near Dalhousie. The vast meadow is surrounded by thick deodar forests and offers stunning views of the Dhauladhar range. Taking off from this picturesque spot allows you to soar like a bird over green fields and serene landscapes, making it perfect for both beginners and experienced flyers.",
     imageContent: "🪂",
     reverse: false,
     length: "N/A",
