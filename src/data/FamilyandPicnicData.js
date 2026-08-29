@@ -55,7 +55,7 @@ export const FamilyPlacesData = [
     description:
       "Subhash Baoli is a calm, scenic spot named after freedom fighter Netaji Subhash Chandra Bose, who once meditated here. Located just 1 km from Dalhousie, this peaceful area surrounded by tall pine trees is ideal for morning or evening family walks. The picnic-friendly environment and open spaces make it a great place for kids to run around and play. Families can enjoy quality time together in this tranquil setting, away from the town's bustle.",
     imageContent: "🌄",
-    image: "/subhash_baoli.jpg",
+    image: "/images/images2/Dal-proj-img-poploc-subashboli.jpg",
     alt: "Family enjoying a peaceful walk at Subhash Baoli surrounded by tall pine trees in Dalhousie.",
     reverse: true,
   },
