@@ -53,9 +53,7 @@ export const Footer = () => {
           <Link to="/popular-locations" className="footer-link">
             Popular Locations
           </Link>
-          <Link to="/about" className="footer-link">
-            About Us
-          </Link>
+          <span className="footer-link">About Us</span>
           <Link to="/contact" className="footer-link">
             Contact
           </Link>
@@ -64,18 +62,10 @@ export const Footer = () => {
         {/* Support */}
         <div className="footer-section">
           <h3 className="footer-title">Support</h3>
-          <Link to="/faq" className="footer-link">
-            FAQ
-          </Link>
-          <Link to="/privacy-policy" className="footer-link">
-            Privacy Policy
-          </Link>
-          <Link to="/terms" className="footer-link">
-            Terms & Conditions
-          </Link>
-          <Link to="/help" className="footer-link">
-            Help Center
-          </Link>
+          <span className="footer-link">FAQ</span>
+          <span className="footer-link">Privacy Policy</span>
+          <span className="footer-link">Terms & Conditions</span>
+          <span className="footer-link">Help Center</span>
         </div>
 
         {/* Contact Info */}
