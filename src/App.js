@@ -1,4 +1,5 @@
 import ContactUs from "./Webpages/ContactUs";
+import { Analytics } from "@vercel/analytics/react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Header } from "./Header&Footer/Header";
 import ScrollToTop from "./component/ScrolltoTop";
@@ -52,6 +53,7 @@ function App() {
           <title>Experience Dalhousie</title>
         </Helmet>
         <GlobalStyles />
+        <Analytics />
         <Header></Header>
 
         <ScrollToTop />
