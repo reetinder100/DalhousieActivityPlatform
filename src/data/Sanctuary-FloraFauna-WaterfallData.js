@@ -95,14 +95,4 @@ export const waterfallsData = [
     alt: "Cascading Satdhara Falls formed by seven springs surrounded by lush deodar and pine forests.",
     reverse: true,
   },
-  {
-    id: 4,
-    title: "Jhandri Ghat Waterfall",
-    description:
-      "Jhandri Ghat Waterfall is a roadside waterfall located on the scenic road from Dalhousie to Chamba. Unlike other falls that require a trek, this cascade is visible directly from the road, making it easily accessible year-round. The waterfall offers a quick and convenient stop for travellers to enjoy the natural beauty of the region without straying far from the main route. Best visited during the monsoon when water flow increases, though it maintains some presence throughout the year.",
-    imageContent: "🌿",
-    image: "/images/images3/Dal-proj-img-waterfall-jandrighatfall.jpg",
-    alt: "Roadside Jhandri Ghat Waterfall on the Dalhousie-Chamba highway surrounded by green hills.",
-    reverse: true,
-  },
 ];

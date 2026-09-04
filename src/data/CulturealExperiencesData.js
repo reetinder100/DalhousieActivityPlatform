@@ -23,10 +23,10 @@ export const CulturalExperiences = [
     id: 4,
     title: "Spiritual & Heritage Sites",
     description:
-      "Discover the religious harmony and ancient traditions of the region. Visit the 700-year-old Chamunda Devi Temple, explore the unique Rang Mahal, a confluence of Mughal and British architecture with Hindu mythological paintings. Pay respects at the tranquil Subhash Baoli, where freedom fighter Subhash Chandra Bose meditated, or explore the serene Kalatop Wildlife Sanctuary.",
+      "Discover the religious harmony and ancient traditions of the region. Visit the 800-year-old Polani Mata Temple, perched on Dainkund Peak and dedicated to Goddess Kali, which requires a scenic trek through lush meadows and deodar forests. Pay respects at the tranquil Subhash Baoli, where freedom fighter Subhash Chandra Bose meditated, or explore the serene Kalatop Wildlife Sanctuary.",
     imageContent: "🛕",
     image: "/images/images2/Dal-proj-img-culture-spiritual.jpg",
-    alt: "The ancient Chamunda Devi Temple near Dalhousie, a significant spiritual and cultural site.",
+    alt: "The ancient Temple near Dalhousie, a significant spiritual and cultural site.",
     reverse: false,
   },
 ];

@@ -9,6 +9,7 @@ import {
   CardDescription,
   ExploreButton,
   CardImage,
+  ButtonContainer,
 } from "../styling/CardforChildrenStyle";
 import PriceCalculateModal from "../Modal/PriceCalculateModal";
 import { useState } from "react";
@@ -32,7 +33,7 @@ const CardItem = ({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
         {showExploreButton && (
-          <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+          <ButtonContainer>
             <ExploreButton
               onClick={() => {
                 // Direct booking - opens Google Form immediately
@@ -52,7 +53,7 @@ const CardItem = ({
             >
               Estimate Price
             </ExploreButton>
-          </div>
+          </ButtonContainer>
         )}
       </CardContent>
       {showImage && image && (
@@ -135,7 +136,6 @@ const ContentData = ({
         onClose={handleCloseModal}
         title={`Price Estimate for ${selectedTitle}`}
         selectedActivity={selectedLocation}
-        confirmText="Close"
         cancelText="Close"
         showFooter={true}
         baseLocation="Dalhousie Town"

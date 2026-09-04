@@ -235,6 +235,21 @@ export const ExploreButton = styled.button`
   }
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+
+  /* Mobile-first: stack vertically */
+  flex-direction: column;
+
+  /* Tablet and desktop: side by side */
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
 export const CardImage = styled.div`
   flex: 1;
   height: 300px;

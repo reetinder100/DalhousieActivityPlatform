@@ -40,16 +40,6 @@ export const offbeatPlacesData = [
     reverse: true,
   },
   {
-    id: 5,
-    title: "Lohani Cave",
-    description:
-      "For adventure seekers, Lohani Cave offers the thrill of exploring underground passages and experiencing spelunking. Located 8 km from Dalhousie, this natural cave system provides a unique adventure beyond typical tourist attractions. With cool temperatures even during summer, the caves offer an exciting exploration experience with a local guide. Best visited from April to October when conditions are safe.",
-    imageContent: "🕯️",
-    image: "/images/images2/Dal-proj-img-offbeat-lohani_cave.jpg",
-    alt: "Dark cave entrance surrounded by forest at Lohani Cave.",
-    reverse: false,
-  },
-  {
     id: 6,
     title: "Alha Kila - Historic Fort Ruins",
     description:
@@ -57,7 +47,7 @@ export const offbeatPlacesData = [
     imageContent: "🏰",
     image: "/images/images2/Dal-proj-img-offbeat-alha_kila.jpg",
     alt: "Ancient fort ruins with panoramic valley views in the background.",
-    reverse: true,
+    reverse: false,
   },
   {
     id: 7,
@@ -67,7 +57,7 @@ export const offbeatPlacesData = [
     imageContent: "🚣",
     image: "/images/images2/Dal-proj-img-offbeat-chameralake.jpg",
     alt: "Crystal blue Chamera Lake surrounded by dense green forests and mountains.",
-    reverse: false,
+    reverse: true,
   },
   {
     id: 8,
@@ -77,7 +67,7 @@ export const offbeatPlacesData = [
     imageContent: "❄️",
     image: "/images/images2/Dal-proj-img-offbeat-sachpass.jpg",
     alt: "Snow-covered Sach Pass with rugged mountain terrain and breathtaking views.",
-    reverse: true,
+    reverse: false,
   },
   {
     id: 9,
@@ -87,6 +77,6 @@ export const offbeatPlacesData = [
     imageContent: "🌄",
     image: "/images/images2/Dal-proj-img-offbeat-karelnu.jpg",
     alt: "Tranquil Karelnu village surrounded by Himalayan forests and mountains.",
-    reverse: false,
+    reverse: true,
   },
 ];

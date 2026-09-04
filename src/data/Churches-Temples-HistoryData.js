@@ -53,16 +53,6 @@ export const churchesData = [
 
 export const templesData = [
   {
-    id: 1,
-    title: "Chamunda Devi Temple",
-    description:
-      "One of the most famous temples in the region, Chamunda Devi Temple is believed to be 750 years old and is dedicated to Goddess Kali, the fearsome incarnation of Goddess Durga. Located on the banks of the stunning Baner River, the temple is surrounded by dense pine and deodar trees, offering majestic mountain views. According to legend, this is the same place where Goddess Ambika killed the demons Munda and Chanda. The main deity is wrapped in a red cloth, and the temple also houses a boulder depicting Lord Shiva in the form of a stone lingam, along with images of Lord Bhairav and Lord Hanuman. Open from 6:00 AM to 8:00 PM.",
-    imageContent: "🕉️",
-    image: "/images/images3/Dal-proj-img-devotion-chamundatemple.jpg",
-    alt: "Ancient Chamunda Devi Temple surrounded by deodar trees on the banks of Baner River near Dalhousie.",
-    reverse: false,
-  },
-  {
     id: 2,
     title: "Laxmi Narayan Temple",
     description:

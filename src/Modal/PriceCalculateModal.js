@@ -13,7 +13,6 @@ import {
   InfoValue,
   Footer,
   CancelButton,
-  ConfirmButton,
 } from "../styling/PriceModalStyle";
 
 import { dalhousieDistances } from "../data/PricingData";
@@ -43,42 +42,43 @@ const calculatePrice = (destination, carType = "sedan") => {
   if (!dest) return { error: `No pricing found for "${destination}"` };
 
   const distanceKm = dest.distanceKm;
-  const distanceText = dest.distanceText;
-  const time = dest.time;
+  let distanceText = `${dest.distanceKm} km`;
 
   let finalPrice;
-  let basePrice;
   let carTypeLabel;
+  let time;
+
+  // Check for walking distance first
+  if (distanceKm < 2) {
+    distanceText = "Walking distance";
+    time = distanceKm < 1 ? "10-15 mins" : "20-30 mins";
+  } else {
+    time = Math.round((distanceKm / 25) * 60) + " mins";
+  }
 
   if (carType === "suv") {
     carTypeLabel = "SUV (6-Seater)";
 
     if (distanceKm < 6) {
       finalPrice = 600;
-      basePrice = 600;
     } else if (distanceKm >= 6 && distanceKm < 30) {
       const calculated = Math.round((distanceKm / 10) * 105 * 4 * 2);
       finalPrice = calculated;
-      basePrice = calculated;
     } else if (distanceKm >= 30) {
       const calculated = Math.round((distanceKm / 10) * 105 * 3);
       finalPrice = calculated;
-      basePrice = calculated;
     }
   } else {
     carTypeLabel = "Sedan (4-Seater)";
 
     if (distanceKm < 6) {
       finalPrice = 500;
-      basePrice = 500;
     } else if (distanceKm >= 6 && distanceKm < 30) {
       const calculated = Math.round((distanceKm / 10) * 105 * 4.5 * 2);
       finalPrice = calculated;
-      basePrice = calculated;
     } else if (distanceKm >= 30) {
       const calculated = Math.round((distanceKm / 10) * 105 * 3.5);
       finalPrice = calculated;
-      basePrice = calculated;
     }
   }
 
@@ -87,7 +87,6 @@ const calculatePrice = (destination, carType = "sedan") => {
     time: time,
     finalPrice: `₹${finalPrice}`,
     carType: carTypeLabel,
-    basePrice: `₹${basePrice}`,
     distanceKm: distanceKm,
   };
 };
@@ -98,7 +97,6 @@ const PriceCalculateModal = ({
   title,
   selectedActivity = "",
   onConfirm = () => {},
-  confirmText = "Proceed to Book",
   cancelText = "Cancel",
   showFooter = true,
   baseLocation = "Dalhousie Town",
@@ -147,7 +145,7 @@ const PriceCalculateModal = ({
         {title && <Title>{title}</Title>}
         <Content>
           <ModalText>
-            Confirm booking for <strong>{selectedActivity}</strong>
+            Assumed base location: <strong>Dalhousie</strong>
           </ModalText>
 
           <InfoCard>
@@ -213,6 +211,14 @@ const PriceCalculateModal = ({
               <div>
                 <InfoLabel>Distance from {baseLocation}</InfoLabel>
                 <InfoValue>{price.distance}</InfoValue>
+              </div>
+            </InfoRow>
+
+            <InfoRow>
+              <InfoIcon>⏱️</InfoIcon>
+              <div>
+                <InfoLabel>Estimated Travel Time</InfoLabel>
+                <InfoValue>{price.time}</InfoValue>
               </div>
             </InfoRow>
 
